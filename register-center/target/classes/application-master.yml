@@ -1,0 +1,10 @@
+server:
+  port: 8761
+  max-http-header-size:    8192
+eureka:
+  instance:    hostname: master
+    prefer-ip-address: true #使用ip地址注册  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
