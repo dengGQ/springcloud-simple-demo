@@ -5,12 +5,11 @@ spring:
   application:
     name: user-manager
   cloud:
-    config:
-      discovery:
-        enabled: true
-        serviceId: config-server
-      profile: prod
-    fail-fast: true
+    config: 
+      profile: dev
+      discovery: 
+        enable: true
+        service-id: config-server
 
 eureka:
   client:

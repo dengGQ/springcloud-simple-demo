@@ -16,11 +16,11 @@ public class UserManagerApplication {
 		SpringApplication.run(UserManagerApplication.class, args);
 	}
 	
-	@Value("${name}")
-	private String name;
+	@Value("${environment}")
+	private String environment;
 	
-	@RequestMapping("/getName")
-	public String getName() {
-		return name;
+	@RequestMapping("/getEnvironment")
+	public String getEnvironment() {
+		return environment;
 	}
 }

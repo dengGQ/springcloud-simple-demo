@@ -2,11 +2,25 @@ spring:
   application:
     name: config-server
   profiles:
-    active:
-    - native
-  cloud:
-    config:
-      server:
-        native:
-          search-locations:
-          - classpath:/configs/${application}/${profile}
+    active: prod #dev,test,prod。此处默认为dev，加加载application-dev.yml中的配置
+
+eureka:
+  client:
+    prefer-same-zone-eureka: true
+    #从eureka注册中心读取数据超时时间。default:8
+    eureka-server-read-timeout-seconds: 8
+    #从eureka注册中心获取注册表的频率，default:30
+    registry-fetch-interval-seconds: 30
+    region: china
+    availability-zones:
+      china: bj,sh
+    service-url:
+#      defaultZone: http://master:8761/eureka,http://master:8762/eureka
+      bj: http://master:8761/eureka
+      sh: http://master:8762/eureka
+  instance:
+    hostname: localhost 
+    #向注册中心发送心跳包的频率，default:30
+    lease-renewal-interval-in-seconds: 5
+    #注册中心至上一次收到心跳包后不将其删除的等待时间
+    lease-expiration-duration-in-seconds: 15 

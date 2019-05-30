@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-spring.boot.launch.profile.history=dev;master;
+spring.boot.launch.profile.history=master;dev;
