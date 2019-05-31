@@ -1,4 +1,4 @@
-environment: git/user-manager-prod.yml
+environment: git/user-manager-prod-1.yml
 user-manager:
   path:
     reportPath: /reports/9091
