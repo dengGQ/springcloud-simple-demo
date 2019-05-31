@@ -1,3 +1,8 @@
 server:
   port: 9090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 environment: https://github.com/dengGQ/springcloud-simple-demo/edit/master/config-repo/user-manager-dev-3.yml
