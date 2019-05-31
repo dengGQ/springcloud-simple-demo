@@ -2,4 +2,6 @@ environment: git/user-manager-dev-4.yml
 user-manager:
   path:
     reportPath: /report/xml/linux
-    searchPathsList: /report, /conf
+    searchPathsList: 
+      - /report
+      - /conf
