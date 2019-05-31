@@ -1,11 +1,10 @@
-server:
-  port: 9090
-  
 spring:
   application:
     name: user-manager
   cloud:
     config: 
+      fail:
+        fast: true #如果连接config server失败，停止启动
       profile: dev
       discovery: 
         enable: true

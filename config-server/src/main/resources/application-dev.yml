@@ -9,4 +9,5 @@ spring:
           #从github处加载配置
           uri: https://github.com/dengGQ/springcloud-simple-demo
           search-paths: config-repo
+          force-pull: true
         skipSslValidation: true
