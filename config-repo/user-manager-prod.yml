@@ -1,1 +1,3 @@
+server:
+  port: 9091
 environment: https://github.com/dengGQ/springcloud-simple-demo/edit/master/config-repo/user-manager-prod.yml
