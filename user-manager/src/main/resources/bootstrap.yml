@@ -1,14 +1,16 @@
 spring:
   application:
     name: user-manager
+  profiles:
+    active: dev
   cloud:
     config: 
       fail:
-        fast: true #如果连接config server失败，停止启动
-      profile: dev
+        fast: false #如果连接config server失败，停止启动
+      profile: ${spring.profiles.active}
       discovery: 
         enable: true
-        service-id: config-server
+        serviceId: config-server
 
 eureka:
   client:
@@ -20,5 +22,5 @@ eureka:
     lease-expiration-duration-in-seconds: 15
     #表示eureka client发送心跳给server端的频率。如果在leaseExpirationDurationInSeconds后，server端没有收到client的心跳，则将摘除该instance
     lease-renewal-interval-in-seconds: 5
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${server.port}
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
