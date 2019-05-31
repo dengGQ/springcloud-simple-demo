@@ -1,4 +1,4 @@
 environment: https://github.com/dengGQ/springcloud-simple-demo/edit/master/config-repo/user-manager-dev-4.yml
 user-manager:
   path:
-    reportPath: /report/xml
+    reportPath: /report/xml/win
