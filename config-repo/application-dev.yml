@@ -1,1 +1,7 @@
-path: /report
+server:
+  port: 9090
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"
