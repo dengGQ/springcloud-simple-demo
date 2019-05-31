@@ -1,1 +1,1 @@
-environment: prod-1.0.0
+environment: https://github.com/dengGQ/springcloud-simple-demo/edit/master/config-repo/user-manager-prod.yml
