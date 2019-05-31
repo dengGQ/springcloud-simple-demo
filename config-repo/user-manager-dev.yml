@@ -7,3 +7,4 @@ user-manager:
       - /conf
       - /config
       - /images
+      - /pages
