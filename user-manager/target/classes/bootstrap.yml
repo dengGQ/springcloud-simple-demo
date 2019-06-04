@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: user-manager
+  profiles:
+    active: dev
+  cloud:
+    config: 
+      fail:
+        #如果连接config server失败，停止启动
+        fast: false
+      profile: ${spring.profiles.active}
+      discovery: 
+        enabled: true
+        serviceId: config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://master:8761/eureka/,http://dev:8762/eureka/
+    #表示eureka client间隔多久去拉取服务注册信息
+    registry-fetch-interval-seconds: 5
+  instance:
+    #表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则将移除该instance
+    lease-expiration-duration-in-seconds: 15
+    #表示eureka client发送心跳给server端的频率。如果在leaseExpirationDurationInSeconds后，server端没有收到client的心跳，则将摘除该instance
+    lease-renewal-interval-in-seconds: 5
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}

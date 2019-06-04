@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "user-manager.path",
+      "type": "com.dgq.users.common.RemoteConfigProperties",
+      "sourceType": "com.dgq.users.common.RemoteConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "user-manager.path.report-path",
+      "type": "java.lang.String",
+      "sourceType": "com.dgq.users.common.RemoteConfigProperties"
+    },
+    {
+      "name": "user-manager.path.search-paths-list",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.dgq.users.common.RemoteConfigProperties"
+    }
+  ],
+  "hints": []
+}
