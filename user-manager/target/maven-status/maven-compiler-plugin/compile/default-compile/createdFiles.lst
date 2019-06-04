@@ -1,5 +1,0 @@
-com\dgq\users\config\CoustomConfigInitlizer.class
-com\dgq\users\common\RemoteConfigProperties.class
-com\dgq\users\UserManagerApplication.class
-com\dgq\users\controller\UserController.class
-META-INF\spring-configuration-metadata.json
