@@ -6,9 +6,10 @@ spring:
       server: 
         git:
           #从github处加载配置
-          uri: https://github.com/dengGQ/springcloud-simple-demo
-          search-paths: config-repo
+          uri: https://github.com/dengGQ/config-repo
+          search-paths: '{application}'
           force-pull: true
+          basedir: /home/dgq/temp
         skipSslValidation: true
 
 
@@ -31,4 +32,5 @@ eureka:
     #向注册中心发送心跳包的频率，default:30
     lease-renewal-interval-in-seconds: 5
     #注册中心至上一次收到心跳包后不将其删除的等待时间
-    lease-expiration-duration-in-seconds: 15 
+    lease-expiration-duration-in-seconds: 15
+#    instance-id: ${spring.application.name} 
