@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: gateway-route
+  profiles:
+    active: dev
+  cloud:
+    config: 
+      profile: ${spring.profiles.active}
+      discovery: 
+        enabled: true
+        serviceId: config-server
+#    gateway:
+#      routes:
+#      - id: user-manager-route #当前路由的ID
+#        uri: lb://user-manager #路由的目的地，lb表示从注册中心获取服务
+#        predicates: 
+#          - Path=/userapi/** #表示所有以/userapi 开头的请求都路由到 uri 上去
+#        filters: #当前路由的过滤器
+#          - StripPrefix=1 #表示路由到指定服务时真正Url从path中去除几个前缀
+#          - SetStatus=1111 #设置响应状态码
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+    #表示eureka client间隔多久去拉取服务注册信息
+    registry-fetch-interval-seconds: 5
+  instance:
+    #表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则将移除该instance
+    lease-expiration-duration-in-seconds: 15
+    #表示eureka client发送心跳给server端的频率。如果在leaseExpirationDurationInSeconds后，server端没有收到client的心跳，则将摘除该instance
+    lease-renewal-interval-in-seconds: 5
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
