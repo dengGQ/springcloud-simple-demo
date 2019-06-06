@@ -42,17 +42,17 @@ public class GatewayRouteApplication {
 				 */
 				.route("user-manager-route", 
 					r->r.order(2)
-					.before(ZonedDateTime.of(LocalDateTime.now().plusMinutes(2l), ZoneId.systemDefault())).and()
-					.after(ZonedDateTime.of(LocalDateTime.now().plusMinutes(3l), ZoneId.systemDefault())).and()
+//					.before(ZonedDateTime.of(LocalDateTime.now().plusMinutes(2l), ZoneId.systemDefault())).and()
+//					.after(ZonedDateTime.of(LocalDateTime.now().plusMinutes(3l), ZoneId.systemDefault())).and()
 //					.between(starTime, endTime).and() //Between Route
 					.header("brain", "dgq").and() //Header Route
 					.cookie("jsession", "1234567").and() //Cookie Route
 					.method(HttpMethod.GET).and() //Method Route
 					.query("name").and() //Query Route
 //					.remoteAddr(resolver, addrs) //在gateway位于一些代理层后面时，可以自定义RemoteAddressResolver来实现对remote的路由
-					.path("/user-api/**") //Path Route
+					.path("/user-api/{a}/{b}") //Path Route
 					.filters(f->f.stripPrefix(1)
-//								.setPath(template)
+								.setPath("/{a}/{b}")
 //								.setStatus(HttpStatus.BAD_GATEWAY)
 //								.addRequestParameter("name", "dgq")
 //								.addResponseHeader("rude", "Yes")
