@@ -5,4 +5,4 @@ user-manager:
     searchPathsList: 
       - /reports/9091/report
       - /reports/9091/conf
-      - /reports/9091/config
+      - /reports/9091/configs
