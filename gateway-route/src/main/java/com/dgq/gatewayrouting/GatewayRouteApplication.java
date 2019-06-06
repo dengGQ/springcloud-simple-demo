@@ -50,12 +50,13 @@ public class GatewayRouteApplication {
 					.method(HttpMethod.GET).and() //Method Route
 					.query("name").and() //Query Route
 //					.remoteAddr(resolver, addrs) //在gateway位于一些代理层后面时，可以自定义RemoteAddressResolver来实现对remote的路由
-					.path("/user-api/{a}/{b}") //Path Route
+//					.path("/user-api/{a}/{b}") //Path Route
+					.path("/user-api/**") //Path Route
 					.filters(f->f.stripPrefix(1)
-								.setPath("/{a}/{b}")
+//								.setPath("/{a}/{b}")
 //								.setStatus(HttpStatus.BAD_GATEWAY)
 //								.addRequestParameter("name", "dgq")
-//								.addResponseHeader("rude", "Yes")
+								.addResponseHeader("rude", "Yes")
 //								.hystrix(h-> h.setFallbackUri("lb://user-manager"))
 //								.rewritePath("/", replacement)
 							)
