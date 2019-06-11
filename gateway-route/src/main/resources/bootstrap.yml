@@ -9,15 +9,26 @@ spring:
       discovery: 
         enabled: true
         serviceId: config-server
-#    gateway:
-#      routes:
-#      - id: user-manager-route #当前路由的ID
-#        uri: lb://user-manager #路由的目的地，lb表示从注册中心获取服务
-#        predicates: 
-#          - Path=/userapi/** #表示所有以/userapi 开头的请求都路由到 uri 上去
-#        filters: #当前路由的过滤器
-#          - StripPrefix=1 #表示路由到指定服务时真正Url从path中去除几个前缀
-#          - SetStatus=1111 #设置响应状态码
+    gateway:
+      defaultFilters:
+        - name: Hystrix
+          args: 
+            name: fallbackcmd
+            fallbackUri: forward:/fallback #gateway程序内部的controller
+      routes:
+      - id: user-manager-route #当前路由的ID
+        uri: lb://user-manager #路由的目的地，lb表示从注册中心获取服务
+        predicates: 
+          - Path=/userapi/** #表示所有以/userapi 开头的请求都路由到 uri 上去
+        filters: #当前路由的过滤器
+          - StripPrefix=1 #表示路由到指定服务时真正Url从path中去除几个前缀
+          - SetStatus=1111 #设置响应状态码
+      - id: fallback-route #这个路由的目的是将fallback的controller指向外部程序
+        uri: lb://order-manager
+        predicates: 
+          - Path=/fallback
+        filters: 
+          - PrefixPath=/user
 eureka:
   client:
     serviceUrl:
@@ -31,3 +42,11 @@ eureka:
     lease-renewal-interval-in-seconds: 5
 #    prefer-ip-address: true
 #    instance-id: ${spring.application.name}:${server.port}
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000

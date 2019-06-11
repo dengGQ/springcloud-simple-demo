@@ -7,11 +7,17 @@ import java.time.ZonedDateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
+
+import com.netflix.hystrix.HystrixCollapserProperties.Setter;
+import com.netflix.hystrix.HystrixCommandProperties;
+
+import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -29,7 +35,7 @@ public class GatewayRouteApplication {
 	 * @return RouteLocator    返回类型
 	 * @throws
 	 */
-	@Bean
+//	@Bean
 	public RouteLocator  customRouteLocator(RouteLocatorBuilder rlBuilder) {
 		
 		ZonedDateTime starTime = ZonedDateTime.of(LocalDateTime.now(), ZoneId.systemDefault());
@@ -50,18 +56,52 @@ public class GatewayRouteApplication {
 					.method(HttpMethod.GET).and() //Method Route
 					.query("name").and() //Query Route
 //					.remoteAddr(resolver, addrs) //在gateway位于一些代理层后面时，可以自定义RemoteAddressResolver来实现对remote的路由
-//					.path("/user-api/{a}/{b}") //Path Route
-					.path("/user-api/**") //Path Route
+//					.path("/userapi/{a}/{b}") //Path Route
+					.path("/userapi/**") //Path Route
 					.filters(f->f.stripPrefix(1)
 //								.setPath("/{a}/{b}")
 //								.setStatus(HttpStatus.BAD_GATEWAY)
 //								.addRequestParameter("name", "dgq")
 								.addResponseHeader("rude", "Yes")
-//								.hystrix(h-> h.setFallbackUri("lb://user-manager"))
-//								.rewritePath("/", replacement)
+//								.hystrix(c-> c.setName("Hystrix")
+//										.setFallbackUri("forward:/fallback"))
+//								.rewritePath("/**", "/user/getSearchPathsList")
 							)
 					.uri("lb://user-manager")
 				)
 				.build();
+	}
+	
+	@Bean
+	@Order(-1)
+	public GlobalFilter globalFilter1() {
+		System.out.println("first pre filter----------------------------------");
+		return (exchange, chain) ->{
+			return chain.filter(exchange).then(Mono.fromRunnable(()->{
+				System.out.println("first post filter--------------------------------------------");
+			}));
+		};
+	}
+	
+	@Bean
+	@Order(0)
+	public GlobalFilter globalFilter2() {
+		System.out.println("second pre filter----------------------------------");
+		return (exchange, chain) ->{
+			return chain.filter(exchange).then(Mono.fromRunnable(()->{
+				System.out.println("second post filter--------------------------------------------");
+			}));
+		};
+	}
+	
+	@Bean
+	@Order(1)
+	public GlobalFilter globalFilter3() {
+		System.out.println("third pre filter----------------------------------");
+		return (exchange, chain) ->{
+			return chain.filter(exchange).then(Mono.fromRunnable(()->{
+				System.out.println("third post filter--------------------------------------------");
+			}));
+		};
 	}
 }
