@@ -194,13 +194,11 @@ public class ExportExcelUtil {
 	public static <T> Sheet createSheet(SXSSFWorkbook workbook, Map<String, String[]> titleAndFieldMap, List<? extends Object> data, String sheetName, Map<String, CellStyle> cellStyle) {
 		// 按报表类别生成一个sheet页
 		Sheet sheet = Objects.isNull(sheetName) ? workbook.createSheet() : workbook.createSheet(sheetName);
-		//sheet title
+		// title
 		String[] title = titleAndFieldMap.get(sheetName);
-		// 储值字段
+		// field
 		String[] fields = titleAndFieldMap.get(sheetName+"field");
-		// 设置表格默认列宽度为25个字节
 		sheet.setDefaultColumnWidth(25);
-		// 工作簿行号
 		int indexRowNum = 0;
 		// 报表标题
 		Row rowField = sheet.createRow(indexRowNum);
