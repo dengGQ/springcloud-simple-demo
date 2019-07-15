@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button"  onclick="getRequest()" value ="get请求">
+	<input type="button"  onclick="postRequest()" value ="post请求">
+	<br/>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		function getRequest() {
+			$.ajax({
+				url : "http://localhost:8080/cors/getUser?name=dgq",
+				type : "GET",
+				beforeSend: function(xhr){
+					//浏览器将CORS请求分成两类：简单请求（simple request）和
+					//非简单请求（not-so-simple request）
+					//如果设置了自定义请求头，就变成了非简单请求，
+					//那么在真正请求之前会有一个type为Options的预检请求
+					xhr.setRequestHeader("Abc", "htttp://www.baidu.com");
+				},
+				success : function(data) {
+					console.log(data);
+				},
+				error : function(data) {
+					console.log(data);
+				}
+			});
+		}
+		function postRequest() {
+			$.ajax({
+				url : "http://localhost:8080/cors/postUser?name=dgq",
+				type : "POST",
+				success : function(data) {
+					console.log(data);
+				},
+				error : function(data) {
+					console.log(data);
+				}
+			});
+		}
+	</script>
+</body>
+</html>

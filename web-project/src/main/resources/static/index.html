@@ -2,125 +2,129 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-	function getRequest() {
-		$.ajax({
-			url : "http://localhost:8080/cors/getUser?name=dgq",
-			type : "GET",
-			beforeSend: function(xhr){
-				//浏览器将CORS请求分成两类：简单请求（simple request）和
-				//非简单请求（not-so-simple request）
-				//如果设置了自定义请求头，就变成了非简单请求，
-				//那么在真正请求之前会有一个type为Options的预检请求
-				xhr.setRequestHeader("Abc", "htttp://www.baidu.com");
-			},
-			success : function(data) {
-				console.log(data);
-			},
-			error : function(data) {
-				console.log(data);
-			}
-		});
-	}
-	function postRequest() {
-		$.ajax({
-			url : "http://localhost:8080/cors/postUser?name=dgq",
-			type : "POST",
-			success : function(data) {
-				console.log(data);
-			},
-			error : function(data) {
-				console.log(data);
-			}
-		});
-	}
-	
-	var websocket = null;
-	function websocktRequest(){
-		if(websocket){
-			websocket.close();
-		}else{
-			websocket = new WebSocket("ws://localhost:8080/ws/"+$("#username").val());
-		}
-		
-		websocket.onopen = function(event){
-			console.log("-----------连接已建立")
-			$("#connect").val("断开")
-			$("#tip").html("已连接...");
-		}
-		websocket.onerror = function(event){
-			console.log("-----------建立连接出错")
-			$("#tip").html("连接异常...");
-		}
-		websocket.onmessage = function(event){
-			console.log("-----------有新消息到达")
-			console.log(event)
-			$("#msgBox").append('<p style="text-align: left;">'+event.data+'</p>')
-		}
-	}
-	
-	function sendMsg(){
-		var msg = $("#msg").val();
-		
-		if(websocket){
-			websocket.send(msg);
-			$("#msgBox").append('<p style="text-align: right;">'+msg+'<span style="color: red"> :'+$("#username").val()+'</span></p>');
-		}
-	}
-	
-	function login(){
-		$.ajax({
-			url: 'http://localhost:8080/user/login',
-			type: 'POST',
-			data: $("#loginForm").serializeArray(),
-			contentType: 'application/x-www-form-urlencoded',
-			success: function(data){
-				console.log($("#loginForm").serializeArray()[0].value);
-				if(data.success){
-					$(".loginBox").css("display", "none");
-					$(".chatBox").css("display", "block");
-					$("#username").val($("#loginForm").serializeArray()[0].value)
-					$("#onlineCount").html(data.onlineCount);	
-					$("#loginCount").html(data.loginCount);
-					websocktRequest(); //登录成功之后连接到聊天室
-				}
-			}
-		})
-	}
-	function logout(){
-		websocket.close();
-		$(".loginBox").css("display", "block");
-		$(".chatBox").css("display", "none");
-	}
-</script>
+<title>WebSocket</title>
 </head>
 <body>
-<input type="button"  onclick="getRequest()" value ="get请求">
-<input type="button"  onclick="postRequest()" value ="post请求">
-<!-- <input id="connect" type="button"  onclick="websocktRequest()" value ="连接"> -->
-<br/>
-
-<input id="username" type="hidden"/>
-<div class="chatBox" style="display: none">
-	<div style="width:260px;height:180px;border: 1px solid gray">
-		<p id="tip" style="color:red;margin: 0px 0px">未连接...</p>
-		<div id="msgBox" style="overflow-y:auto;height: 159px">
-			
-		</div>
+	<input id="username" type="hidden"/>
+	<div class="toUser" id="toUser">
+		<span>在线好友：</span>
+		<select id="onlineFriends">
+			<option value="full">群发</option>
+			<option v-for="(o, index) in userList" :value='o.sessionid'>{{o.username}}</option>
+		</select>
 	</div>
-	<input type="text" id="msg"/>
-	<input type="button" onclick="logout()" value="退出"/>
-	<input type="button" onclick="sendMsg()" value="发送"/>
-	<p>在线人数：<span id="onlineCount"></span> 登录人数：<span id="loginCount"></span></p>
-</div>
-<div class="loginBox">
-	<form id="loginForm" action="/user/login" method="post">
-		<input type="text" name="username"/>
-		<input type="password" name="pwd"/>
-		<input type="button" onclick="login()" value="登录"/>
-	</form>
-</div>
+	<div class="chatBox" style="display: none">
+		<div style="width:260px;height:180px;border: 1px solid gray">
+			<p id="tip" style="color:red;margin: 0px 0px">未连接...</p>
+			<div id="msgBox" style="overflow-y:auto;height: 159px">
+				
+			</div>
+		</div>
+		<input type="text" id="msg"/>
+		<input type="button" onclick="logout()" value="退出"/>
+		<input type="button" onclick="sendMsg()" value="发送"/>
+		<p>在线人数：<span id="onlineCount"></span> 登录人数：<span id="loginCount"></span></p>
+	</div>
+	<div class="loginBox">
+		<form id="loginForm" action="/user/login" method="post">
+			<input type="text" name="username"/>
+			<input type="password" name="pwd"/>
+			<input type="button" onclick="login()" value="登录"/>
+		</form>
+	</div>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#toUser',
+			data: {
+				userList: []
+			},
+			methods:{
+				getItems(){
+				    axios.get('/user/userList').then(res=>{
+				    	console.log(res)
+				    	if(res.status==200){
+				        	this.userList = res.data
+				    	}else{
+				    		console.log("从服务器请求数据失败！");  
+				    	}
+				    })
+				}
+			}
+		});
+		vm.getItems()
+		
+		var websocket = null;
+		function websocktRequest(){
+			if(websocket){
+				websocket.close();
+			}else{
+				websocket = new WebSocket("ws://localhost:8080/ws/"+$("#username").val());
+			}
+			
+			websocket.onopen = function(event){
+				console.log("-----------连接已建立")
+				$("#connect").val("断开")
+				$("#tip").html("已连接...");
+			}
+			websocket.onerror = function(event){
+				console.log("-----------建立连接出错")
+				$("#tip").html("连接异常...");
+			}
+			websocket.onmessage = function(event){
+				console.log("-----------有新消息到达")
+				var msgObj = $.parseJSON(event.data); 
+				console.log(msgObj.to);
+				//有新好友上限通知
+				if(msgObj.to == "notice"){
+					vm.getItems()
+				}else{
+					$("#msgBox").append('<p style="text-align: left;"><span style="color:red">'+msgObj.from+': </span>'+msgObj.msg+'</p>')
+				}
+			}
+		}
+		
+		function sendMsg(){
+			var msg = $("#msg").val();
+			var onlineFriends = $("#onlineFriends").val()
+			var msgEntity = {"msg": msg, "to": onlineFriends}	
+			if(websocket){
+				websocket.send(JSON.stringify(msgEntity));
+				$("#msgBox").append('<p style="text-align: right;">'+msg+'<span style="color: red"> :'+$("#username").val()+'</span></p>');
+			}
+		}
+		
+		function login(){
+			$.ajax({
+				url: 'http://localhost:8080/user/login',
+				type: 'POST',
+				data: $("#loginForm").serializeArray(),
+				contentType: 'application/x-www-form-urlencoded',
+				success: function(data){
+					console.log($("#loginForm").serializeArray()[0].value);
+					if(data.success){
+						$(".loginBox").css("display", "none");
+						$(".chatBox").css("display", "block");
+						$("#username").val($("#loginForm").serializeArray()[0].value)
+						$("#onlineCount").html(data.onlineCount);	
+						$("#loginCount").html(data.loginCount);
+						websocktRequest(); //登录成功之后连接到聊天室
+					}
+				}
+			})
+		}
+		function logout(){
+			websocket.close();
+			$(".loginBox").css("display", "block");
+			$(".chatBox").css("display", "none");
+		}
+	
+		function createWebSocket(path) {
+			return new WebSocket("ws://localhost:8080/"+path);
+		}
+	</script>
+	
 </body>
 </html>
