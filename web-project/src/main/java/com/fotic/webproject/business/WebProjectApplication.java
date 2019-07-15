@@ -22,7 +22,7 @@ public class WebProjectApplication {
 	//这里可以查当前使用的是什么类型的事务管理器
 	@Bean
 	public Object lookTransactionManager(PlatformTransactionManager manager){
-		System.out.println("-------------------"+manager.getClass().getName());
+		System.out.println("---- ---------------"+manager.getClass().getName());
 		return null;
 	}
 }

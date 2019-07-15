@@ -1,4 +1,4 @@
-package com.fotic.webproject.config;
+package com.fotic.webproject.business.config;
 
 import javax.servlet.Filter;
 

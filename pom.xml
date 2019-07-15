@@ -25,6 +25,7 @@
         <druid.version>1.1.10</druid.version>
         <springfox-version>2.7.0</springfox-version>
         <projectlombok-version>1.18.8</projectlombok-version>
+        <websocket-version>2.1.6.RELEASE</websocket-version>
 	</properties>
   
 	<dependencyManagement>
@@ -66,6 +67,11 @@
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>${projectlombok-version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-starter-websocket</artifactId>
+			    <version>${websocket-version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
