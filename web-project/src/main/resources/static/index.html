@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>WebSocket</title>
+	<meta charset="UTF-8">
+	<title>WebSocket</title>
+	<style type="text/css">
+		body{
+			background-color: #C1CDC1
+		}
+		#chatContainer{
+			display:table;
+    		margin:0 auto;
+		}
+		#msgBox{
+			background-color: white;
+		}
+	</style>
 </head>
 <body>
-	<input id="username" type="hidden"/>
-	<div class="toUser" id="toUser">
-		<span>在线好友：</span>
-		<select id="onlineFriends">
-			<option value="full">群发</option>
-			<option v-for="(o, index) in userList" :value='o.sessionid'>{{o.username}}</option>
-		</select>
-	</div>
-	<div class="chatBox" style="display: none">
-		<div style="width:260px;height:180px;border: 1px solid gray">
-			<p id="tip" style="color:red;margin: 0px 0px">未连接...</p>
-			<div id="msgBox" style="overflow-y:auto;height: 159px">
-				
-			</div>
+	<div id="chatContainer">
+		<input id="username" type="hidden"/>
+		<div class="myFriends" id="myFriends">
+			<span>在线好友：</span>
+			<select id="onlineFriends">
+				<option value="full">群发</option>
+				<option v-for="(o, index) in userList" :value='o.sessionid'>{{o.username}}</option>
+			</select>
 		</div>
-		<input type="text" id="msg"/>
-		<input type="button" onclick="logout()" value="退出"/>
-		<input type="button" onclick="sendMsg()" value="发送"/>
-		<p>在线人数：<span id="onlineCount"></span> 登录人数：<span id="loginCount"></span></p>
+		<div class="chatBox" style="display: none">
+			<div style="width:260px;height:180px;border: 1px solid gray">
+				<p id="tip" style="color:red;margin: 0px 0px">未连接...</p>
+				<div id="msgBox" style="overflow-y:auto;height: 159px">
+					
+				</div>
+			</div>
+			<input type="text" id="msg"/>
+			<input type="button" onclick="logout()" value="退出"/>
+			<input type="button" onclick="sendMsg()" value="发送"/>
+			<p>在线人数：<span id="onlineCount"></span> 登录人数：<span id="loginCount"></span></p>
+		</div>
+		<div class="loginBox">
+			<form id="loginForm" action="/user/login" method="post">
+				<input type="text" name="username"/>
+				<input type="password" name="pwd"/>
+				<input type="button" onclick="login()" value="登录"/>
+			</form>
+		</div>
 	</div>
-	<div class="loginBox">
-		<form id="loginForm" action="/user/login" method="post">
-			<input type="text" name="username"/>
-			<input type="password" name="pwd"/>
-			<input type="button" onclick="login()" value="登录"/>
-		</form>
-	</div>
+	
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript">
 		var vm = new Vue({
-			el: '#toUser',
+			el: '#myFriends',
 			data: {
 				userList: []
 			},
@@ -66,7 +81,6 @@
 			
 			websocket.onopen = function(event){
 				console.log("-----------连接已建立")
-				$("#connect").val("断开")
 				$("#tip").html("已连接...");
 			}
 			websocket.onerror = function(event){
@@ -76,21 +90,23 @@
 			websocket.onmessage = function(event){
 				console.log("-----------有新消息到达")
 				var msgObj = $.parseJSON(event.data); 
-				console.log(msgObj.to);
+				console.log(msgObj);
 				//有新好友上限通知
 				if(msgObj.to == "notice"){
 					vm.getItems()
+					$("#onlineCount").html(msgObj.online)
+					$("#loginCount").html(msgObj.login)
 				}else{
-					$("#msgBox").append('<p style="text-align: left;"><span style="color:red">'+msgObj.from+': </span>'+msgObj.msg+'</p>')
+					var msgBody = '<p style="text-align: left;"><span style="color:red">'+msgObj.from+': </span>'+msgObj.msg+'</p>';
+					$("#msgBox").append(msgBody)
 				}
 			}
 		}
 		
 		function sendMsg(){
-			var msg = $("#msg").val();
-			var onlineFriends = $("#onlineFriends").val()
-			var msgEntity = {"msg": msg, "to": onlineFriends}	
 			if(websocket){
+				var msg = $("#msg").val();
+				var msgEntity = {"msg": msg, "to": $("#onlineFriends").val()}	
 				websocket.send(JSON.stringify(msgEntity));
 				$("#msgBox").append('<p style="text-align: right;">'+msg+'<span style="color: red"> :'+$("#username").val()+'</span></p>');
 			}

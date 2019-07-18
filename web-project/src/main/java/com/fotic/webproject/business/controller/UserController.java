@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fotic.webproject.business.IM.LocalMemory;
 import com.fotic.webproject.business.IM.User;
 
-import javassist.expr.NewArray;
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
