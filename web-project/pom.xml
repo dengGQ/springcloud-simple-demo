@@ -87,7 +87,31 @@
 		    <artifactId>fastjson</artifactId>
 		    <version>1.2.47</version>
 		</dependency>
-				
+		
+		<dependency>
+		    <groupId>ch.ethz.ganymed</groupId>
+		    <artifactId>ganymed-ssh2</artifactId>
+		    <version>262</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+		<dependency>
+		    <groupId>commons-net</groupId>
+		    <artifactId>commons-net</artifactId>
+		    <version>3.6</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.jcraft</groupId>
+		    <artifactId>jsch</artifactId>
+		    <version>0.1.51</version>
+		</dependency>
+		<!-- jsch 所依赖的jar包  -->
+		<dependency>
+		    <groupId>com.jcraft</groupId>
+		    <artifactId>jzlib</artifactId>
+		    <version>1.0.7</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

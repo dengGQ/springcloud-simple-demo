@@ -1,14 +1,14 @@
 package com.fotic.webproject.business;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
+import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Test {
+public class ListUtils {
 	
 	public static List<Map<String, Object>> initData(){
 		Map<String,Object> map1 = new HashMap<>();
@@ -34,10 +34,11 @@ public class Test {
 		map4.put("out_num",20);
 		Map<String,Object> map5 = new HashMap<>();
 		map5.put("a_id",2);
-		map5.put("out_num",20);
+		map5.put("out_num",22);
 		Map<String,Object> map6 = new HashMap<>();
 		map6.put("a_id",3);
-		map6.put("out_num",20);
+		map6.put("out_num",12);
+		map6.put("name",45);
 		List<Map<String,Object>> list2 = new ArrayList<>();
 		list2.add(map4);
 		list2.add(map5);
@@ -46,20 +47,41 @@ public class Test {
 		return list2;
 	}
 	
+	public static List<Map<String, Object>> merge(List<Map<String, Object>> m1, List<Map<String, Object>> m2){
+		
+		m1.addAll(m2);
+		
+		Set<String> set = new HashSet<>();
+		
+		return m1.stream()
+				.collect(Collectors.groupingBy(o->{
+					//暂存所有key
+					set.addAll(o.keySet());
+					//按a_id分组
+					return o.get("a_id");
+				})).entrySet().stream().map(o->{
+					
+					//合并
+					Map<String, Object> map = o.getValue().stream().flatMap(m->{
+						return m.entrySet().stream();
+					}).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a,b)->b));
+					
+					//为没有的key赋值0
+					set.stream().forEach(k->{
+						if(!k.equals("a_id") && !map.containsKey(k)) {
+							map.put(k, 0);
+						}
+					});
+					
+					return map;
+				}).collect(Collectors.toList());
+	}
+	
 	public static void main(String args[]) {
 		List<Map<String, Object>> data = initData();
 		List<Map<String, Object>> data2 = initData2();
-		data.addAll(data2);
 		
-		
-		List<Map<String,Object>> list = data.stream().collect(Collectors.groupingBy(o->{
-			Object object = o.get("a_id");
-			return object;
-		})).entrySet().stream().map(o->{
-			return o.getValue().stream().flatMap(m->m.entrySet().stream())
-					.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a,b)->b));
-		}).collect(Collectors.toList());
-		
-		System.out.print(list);
+		List<Map<String,Object>> list = merge(data, data2);
+		System.out.println(list);
 	}
 }
