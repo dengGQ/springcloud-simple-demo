@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fotic.it.support.signature.dao.mapper.SignatureInfoMapper">
+
+    <resultMap type="com.fotic.it.support.signature.dao.entity.SignatureInfo" id="SignatureInfoMap">
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="signid" column="SIGNID" jdbcType="INTEGER"/>
+        <result property="keynumber" column="KEYNUMBER" jdbcType="VARCHAR"/>
+        <result property="keypwd" column="KEYPWD" jdbcType="VARCHAR"/>
+        <result property="signno" column="SIGNNO" jdbcType="VARCHAR"/>
+        <result property="signaturename" column="SIGNATURENAME" jdbcType="VARCHAR"/>
+        <result property="holder" column="HOLDER" jdbcType="VARCHAR"/>
+        <result property="remark" column="REMARK" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--通过signatureId查询记录-->
+    <select id="findAllBySignId" resultMap="SignatureInfoMap">
+        select
+          ID, SIGNID, KEYNUMBER, KEYPWD, SIGNNO, SIGNATURENAME, HOLDER, REMARK
+        from SIGNATURE_INFO
+        where SIGNID = #{signid}
+    </select>
+    <!--通过id查询记录-->
+    <select id="findAllByID" resultMap="SignatureInfoMap">
+        select
+          ID, SIGNID, KEYNUMBER, KEYPWD, SIGNNO, SIGNATURENAME, HOLDER, REMARK
+        from SIGNATURE_INFO
+        where ID = #{signid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SignatureInfoMap">
+        select
+          ID, SIGNID, KEYNUMBER, KEYPWD, SIGNNO, SIGNATURENAME, HOLDER, REMARK
+        from SIGNATURE_INFO
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SignatureInfoMap">
+        select
+          ID, SIGNID, KEYNUMBER, KEYPWD, SIGNNO, SIGNATURENAME, HOLDER, REMARK
+        from SIGNATURE_INFO
+        <where>
+            <if test="id != null">
+                and ID = #{id}
+            </if>
+            <if test="signid != null">
+                and SIGNID = #{signid}
+            </if>
+            <if test="keynumber != null and keynumber != ''">
+                and KEYNUMBER = #{keynumber}
+            </if>
+            <if test="keypwd != null and keypwd != ''">
+                and KEYPWD = #{keypwd}
+            </if>
+            <if test="signno != null and signno != ''">
+                and SIGNNO = #{signno}
+            </if>
+            <if test="signaturename != null and signaturename != ''">
+                and SIGNATURENAME = #{signaturename}
+            </if>
+            <if test="holder != null and holder != ''">
+                and HOLDER = #{holder}
+            </if>
+            <if test="remark != null and remark != ''">
+                and REMARK = #{remark}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="false">
+        insert into SIGNATURE_INFO(SIGNID, KEYNUMBER, KEYPWD, SIGNNO, SIGNATURENAME, HOLDER, REMARK)
+        values (#{signid}, #{keynumber}, #{keypwd}, #{signno}, #{signaturename}, #{holder}, #{remark})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update SIGNATURE_INFO
+        <set>
+            <if test="signid != null">
+                SIGNID = #{signid},
+            </if>
+            <if test="keynumber != null and keynumber != ''">
+                KEYNUMBER = #{keynumber},
+            </if>
+            <if test="keypwd != null and keypwd != ''">
+                KEYPWD = #{keypwd},
+            </if>
+            <if test="signno != null and signno != ''">
+                SIGNNO = #{signno},
+            </if>
+            <if test="signaturename != null and signaturename != ''">
+                SIGNATURENAME = #{signaturename},
+            </if>
+            <if test="holder != null and holder != ''">
+                HOLDER = #{holder},
+            </if>
+            <if test="remark != null and remark != ''">
+                REMARK = #{remark},
+            </if>
+        </set>
+        where ID = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from SIGNATURE_INFO where ID = #{id}
+    </delete>
+
+</mapper>

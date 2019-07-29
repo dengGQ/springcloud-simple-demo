@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fotic.it.support.signature.dao.mapper.SignSystemRelationMapper">
+
+    <resultMap type="com.fotic.it.support.signature.dao.entity.SignSystemRelation" id="SignSystemRelationMap">
+        <result property="sid" column="SID" jdbcType="INTEGER"/>
+        <result property="sysid" column="SYSID" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--通过Id查询记录-->
+    <select id="findAllById" resultMap="SignSystemRelationMap">
+        select
+          SID, SYSID
+        from SIGN_SYSTEM_RELATION
+        where SID = #{sid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SignSystemRelationMap">
+        select
+          SID, SYSID
+        from SIGN_SYSTEM_RELATION
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SignSystemRelationMap">
+        select
+          SID, SYSID
+        from SIGN_SYSTEM_RELATION
+        <where>
+            <if test="sid != null">
+                and SID = #{sid}
+            </if>
+            <if test="sysid != null">
+                and SYSID = #{sysid}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="sid" useGeneratedKeys="false">
+        insert into SIGN_SYSTEM_RELATION()
+        values ()
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update SIGN_SYSTEM_RELATION
+        <set>
+        </set>
+        where SID = #{sid}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from SIGN_SYSTEM_RELATION where SID = #{sid}
+    </delete>
+
+</mapper>

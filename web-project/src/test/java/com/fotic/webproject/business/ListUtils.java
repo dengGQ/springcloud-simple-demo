@@ -1,5 +1,7 @@
 package com.fotic.webproject.business;
 
+import static org.assertj.core.api.Assertions.entry;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -83,5 +85,32 @@ public class ListUtils {
 		
 		List<Map<String,Object>> list = merge(data, data2);
 		System.out.println(list);
+		System.out.println("----------------------");
+		
+		
+		Map<String, Object> map = new HashMap<>();
+		map.put("a_id", "dgq");
+		map.put("b_id", "dgq");
+		
+		Map<String, Object> map1 = new HashMap<>();
+		map1.put("a_id", "dgq");
+		map1.put("c_id", "dgq");
+		
+		
+		map.merge("a_id", 2, (oldValue, newValue)->{
+			return oldValue+String.valueOf(newValue);
+		});
+		
+		/*
+		 * map.compute("a_id", (key, oldValue)->{ System.out.println(key);
+		 * System.out.println(oldValue); return oldValue+"--"; });
+		 * 
+		 * Map<String, Object> map2 = map.entrySet().stream().map(entry->{
+		 * entry.setValue(entry.getValue()+"--"); return entry;
+		 * }).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+		 */
+		
+		System.out.println(map);
+//		System.out.println(map2);
 	}
 }

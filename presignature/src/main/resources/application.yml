@@ -1,0 +1,75 @@
+server:
+  port: 8457
+
+public-key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKy5IysuiySJu6RYaGM18VLql7gw3BwM6CPHmgaVb6cLymiD8Fbq92LN/WjeRAdIwTh/ZR/99c5h7ybA6EqfoR0CAwEAAQ==
+
+spring:
+  application:
+    name: presignature
+  #  datasource:
+  #    driver-class-name: org.h2.Driver
+  #    url: jdbc:h2:tcp://172.16.112.144:1234/./test
+  #    username: sa
+  #    password:
+  datasource:
+    druid:
+      #      url: jdbc:oracle:thin:@10.7.101.45:1521:pydb2
+      url: jdbc:oracle:thin:@10.7.101.31:1521:pydb5
+      username: portal
+      password: LgV45P/vgz7pZpv+GmMmsYcGFEmZef77fQoRtOFCrA8BBxc79zzZaZ5LjkBSQmyT5aPQkdxZ+g1GOC4kkYSXew==
+      #连接池配置
+      #配置初始化大小、最小、最大、等待超时的时间
+      initial-size: 5
+      max-active: 20
+      min-idle: 1
+      max-wait: 60000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 600000
+      # 连接有效性验证
+      validation-query: select 1 from dual
+      # 针对oracle数据库，缓存pscache,并设置连接数
+      max-pool-prepared-statement-per-connection-size: 100
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      filter:
+        config:
+          enabled: true
+        stat:
+          enabled: true
+        slf4j:
+          enabled: true
+      connection-properties: config.decrypt=true;config.decrypt.key=${public-key}
+      # 监控配置
+      web-stat-filter:
+        enabled: true
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      # 数据库监控,默认上下文位置为/druid
+      stat-view-servlet:
+        enabled: true
+
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+    endpoint:
+      health:
+        show-details: ALWAYS
+
+mybatis:
+  mapper-locations: classpath:mapper/*.sqlmap.xml
+pagehelper:
+  autoRuntimeDialect: true
+  helperDialect: oracle
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+commons-config:
+  #签章许可证书文件路径
+  signature-certificate-path: /iSignature.pfx
+  #签章定时任务执行频率（一分钟）
+  scheduled-task-cycle: 0 0/1 * * * ?
+cxf:
+  path: /isignweb/services

@@ -1,0 +1,1321 @@
+2019-07-23 09:38:41 [main] [INFO] [org.springframework.boot.StartupInfoLogger:50] - Starting App on USER-20170918NT with PID 11156 (D:\idea-work\git\presignature\target\classes started by Administrator in D:\idea-work\git\presignature) 
+2019-07-23 09:38:41 [main] [INFO] [org.springframework.boot.SpringApplication:675] - No active profile set, falling back to default profiles: default 
+2019-07-23 09:38:48 [main] [INFO] [org.springframework.boot.StartupInfoLogger:59] - Started App in 7.682 seconds (JVM running for 10.311) 
+2019-07-23 09:38:48 [main] [INFO] [com.fotic.it.support.signature.service.SignatureScheduled:42] - 签章定时任务启动成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/ztjh/input/，输出文件路径：/PRV/ztjh/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：450,450，签章方式：1,签章所在页：7 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/ztjh/output/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/ztjh/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉渶姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉┈闇�姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:39:00 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:01 [http-nio-8457-exec-3] [INFO] [com.fotic.it.support.signature.api.webservice.impl.ElectronicSignatureWebServiceImpl:160] - 进入 Webservice 接口方法 electronicSignature，输入文件路径：inputFilePath，输出文件路径：outputFilePath，系统名称：sysName，安全码:keyPwd，签章方式：sealType，签章位置：sealPositionByText，签章编号：sealIndex，签章所在页：1 
+2019-07-23 09:42:07 [http-nio-8457-exec-3] [ERROR] [com.fotic.it.support.signature.util.SignatureArgumentsValidateUtil:24] - 签章方式 sealType 既不是文字定位也不是像素定位 
+2019-07-23 09:42:15 [http-nio-8457-exec-3] [INFO] [com.fotic.it.support.signature.service.impl.ElectronicsignatureInfoLogServiceImpl:110] - 执行insert动作 
+2019-07-23 09:42:21 [http-nio-8457-exec-3] [INFO] [com.fotic.it.support.signature.service.impl.ElectronicsignatureInfoLogServiceImpl:110] - 执行insert动作 
+2019-07-23 09:42:21 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:42:21 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:42:21 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:42:21 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:42:22 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:42:24 [schedule-task-1] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/ztjh/input/，输出文件路径：/PRV/ztjh/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：450,450，签章方式：1,签章所在页：7 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/ztjh/output/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/ztjh/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉渶姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉┈闇�姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/smyfinancial/dc/input/，输出文件路径：/PRV/smyfinancial/dc/middle1/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：440,370，签章方式：1,签章所在页：1 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/smyfinancial/dc/middle1/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc/middle1 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/smyfinancial/dc/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/smyfinancial/dc/input/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/smyfinancial/dc/input/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/smyfinancial/dc/middle1/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/smyfinancial/dc/middle1/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/smyfinancial/dc/input/，输出参数为：/PRV/smyfinancial/dc/middle1/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/smyfinancial/dc/input/，输出参数为：/PRV/smyfinancial/dc/middle1/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/smyfinancial/dc/middle1/，输出文件路径：/PRV/smyfinancial/dc/middle2/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：440,580，签章方式：1,签章所在页：2 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/smyfinancial/dc/middle2/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc/middle2 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/smyfinancial/dc/middle1/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/smyfinancial/dc/middle1/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/smyfinancial/dc/middle1/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/smyfinancial/dc/middle2/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/smyfinancial/dc/middle2/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/smyfinancial/dc/middle1/，输出参数为：/PRV/smyfinancial/dc/middle2/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/smyfinancial/dc/middle1/，输出参数为：/PRV/smyfinancial/dc/middle2/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/smyfinancial/dc/middle2/，输出文件路径：/PRV/smyfinancial/dc/middle3/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：420,380，签章方式：1,签章所在页：3 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/smyfinancial/dc/middle3/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/smyfinancial/dc/middle3 文件路径成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/smyfinancial/dc/middle2/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/smyfinancial/dc/middle2/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/smyfinancial/dc/middle2/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/smyfinancial/dc/middle3/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/smyfinancial/dc/middle3/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/smyfinancial/dc/middle2/，输出参数为：/PRV/smyfinancial/dc/middle3/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/smyfinancial/dc/middle2/，输出参数为：/PRV/smyfinancial/dc/middle3/ ，签章文件夹执行成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/smyfinancial/dc/middle3/，输出文件路径：/PRV/smyfinancial/dc/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：470,660，签章方式：1,签章所在页：4 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/smyfinancial/dc/output/ 是否存在 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/smyfinancial/dc/middle3/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/smyfinancial/dc/middle3/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/smyfinancial/dc/middle3/ 的子文件夹：无 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/smyfinancial/dc/output/ 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/smyfinancial/dc/output/ 目录已存在，不再进行创建 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/smyfinancial/dc/middle3/，输出参数为：/PRV/smyfinancial/dc/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/smyfinancial/dc/middle3/，输出参数为：/PRV/smyfinancial/dc/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:44:01 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:47:00 [schedule-task-5] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:50:00 [schedule-task-2] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/ztjh/input/，输出文件路径：/PRV/ztjh/output/ 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：450,450，签章方式：1,签章所在页：7 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/ztjh/output/ 是否存在 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/ztjh/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉渶姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉┈闇�姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:51:00 [schedule-task-7] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/ztjh/input/，输出文件路径：/PRV/ztjh/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：450,450，签章方式：1,签章所在页：7 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/ztjh/output/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/ztjh/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉渶姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉┈闇�姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:53:00 [schedule-task-8] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:56:00 [schedule-task-9] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/output/，输出文件路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：200,680，签章方式：1,签章所在页：1 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：信托登记 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output2/ 是否存在 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/output/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/output/ 的子文件夹：无 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output2/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output2/ 目录已存在，不再进行创建 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/output/，输出参数为：/PRV/zjb/xtht/output2/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/zjb/xtht/input/，输出文件路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：480,680，签章方式：1,签章所在页：1 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2315101515210513，章名称：公章 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/zjb/xtht/output/ 是否存在 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV 文件路径成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb 文件路径成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht 文件路径成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:224] - 创建 /PRV/zjb/xtht/output 文件路径成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/zjb/xtht/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/zjb/xtht/input/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/zjb/xtht/input/ 的子文件夹：无 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/zjb/xtht/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/zjb/xtht/output/ 目录已存在，不再进行创建 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/zjb/xtht/input/，输出参数为：/PRV/zjb/xtht/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/fortune/input/，输出文件路径：/PRV/fortune/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：中国对外经济贸易信托有限公司，签章方式：0,签章所在页：0 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/fortune/output/ 是否存在 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/fortune/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/fortune/input/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/fortune/input/ 的子文件夹：无 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/fortune/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/fortune/output/ 目录已存在，不再进行创建 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/fortune/input/，输出参数为：/PRV/fortune/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/test1/input/，输出文件路径：/test1/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,200，签章方式：1,签章所在页：1 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：1901201415210513，章名称：中国对外经济贸易信托有限公司-财富管理中心业务专用章 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /test1/output/ 是否存在 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /test1/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/test1/input/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /test1/input/ 的子文件夹：无 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/test1/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /test1/output/ 目录已存在，不再进行创建 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/test1/input/，输出参数为：/test1/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/pa/input/，输出文件路径：/PRV/pa/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：100,150，签章方式：1,签章所在页：1 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/pa/output/ 是否存在 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/pa/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:394] - 父文件夹：/PRV/pa/input/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:404] - /PRV/pa/input/ 的子文件夹：无 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:427] - 输出路径：/PRV/pa/output/ 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [WARN] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:448] - /PRV/pa/output/ 目录已存在，不再进行创建 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 09:59:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/pa/input/，输出参数为：/PRV/pa/output/ ，签章文件夹执行成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:600] - 输入文件路径：/PRV/ztjh/input/，输出文件路径：/PRV/ztjh/output/ 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:601] - 签章编号：null，签章定位：450,450，签章方式：1,签章所在页：7 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:602] - 签章序号：2370191515210513，章名称：小微金融业务专用章 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:213] - 检查输出路径 /PRV/ztjh/output/ 是否存在 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:362] - 将 /PRV/ztjh/input/ 目录中所有文件结构转化成 Map 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:368] - 开始递归调用 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉渶姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:561] - 鐢靛瓙绛剧珷楠岃瘉涓枃鍚嶉┈闇�姹?pdf 不是文件夹，也不是 pdf 类型的文件 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:370] - 结束递归调用 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:392] - 输入文件路径转换 map 结果 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:418] - 生成输出文件夹路径集合 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:425] - 生成输出文件夹路径集合完毕，生成结果： 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:437] - 将要在 10.7.104.14 服务器创建输出文件夹 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:458] - 在 10.7.104.14 服务器创建输出文件夹完毕 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:48] - 登陆 10.7.104.14 服务器成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.util.FtpFileOperator:76] - FTP 连接关闭 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.impl.SignatureServiceImpl:136] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 
+2019-07-23 10:00:00 [schedule-task-3] [INFO] [com.fotic.it.support.signature.service.SignatureScheduledTask:131] - 输入参数为：/PRV/ztjh/input/，输出参数为：/PRV/ztjh/output/ ，签章文件夹执行成功 

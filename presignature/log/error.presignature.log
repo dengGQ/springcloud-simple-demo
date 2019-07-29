@@ -1,0 +1,33 @@
+2019-07-23 09:42:07 [http-nio-8457-exec-3] [ERROR] [com.fotic.it.support.signature.util.SignatureArgumentsValidateUtil:24] - 签章方式 sealType 既不是文字定位也不是像素定位 
+2019-07-23 09:53:05 [Druid-ConnectionPool-Destroy-193383192] [ERROR] [com.alibaba.druid.util.JdbcUtils:75] - close connection error 
+java.sql.SQLRecoverableException: IO 错误: Socket read timed out
+	at oracle.jdbc.driver.T4CConnection.logoff(T4CConnection.java:587)
+	at oracle.jdbc.driver.PhysicalConnection.close(PhysicalConnection.java:4011)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_close(FilterChainImpl.java:186)
+	at com.alibaba.druid.filter.FilterAdapter.connection_close(FilterAdapter.java:776)
+	at com.alibaba.druid.filter.logging.LogFilter.connection_close(LogFilter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_close(FilterChainImpl.java:181)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_close(StatFilter.java:261)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_close(FilterChainImpl.java:181)
+	at com.alibaba.druid.filter.FilterAdapter.connection_close(FilterAdapter.java:776)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_close(FilterChainImpl.java:181)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.close(ConnectionProxyImpl.java:115)
+	at com.alibaba.druid.util.JdbcUtils.close(JdbcUtils.java:73)
+	at com.alibaba.druid.pool.DruidDataSource.shrink(DruidDataSource.java:2797)
+	at com.alibaba.druid.pool.DruidDataSource$DestroyTask.run(DruidDataSource.java:2562)
+	at com.alibaba.druid.pool.DruidDataSource$DestroyConnectionThread.run(DruidDataSource.java:2549)
+Caused by: oracle.net.ns.NetException: Socket read timed out
+	at oracle.net.ns.Packet.receive(Packet.java:347)
+	at oracle.net.ns.DataPacket.receive(DataPacket.java:106)
+	at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:324)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:268)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:190)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:107)
+	at oracle.jdbc.driver.T4CSocketInputStreamWrapper.readNextPacket(T4CSocketInputStreamWrapper.java:124)
+	at oracle.jdbc.driver.T4CSocketInputStreamWrapper.read(T4CSocketInputStreamWrapper.java:80)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1137)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:350)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4C7Ocommoncall.doOLOGOFF(T4C7Ocommoncall.java:61)
+	at oracle.jdbc.driver.T4CConnection.logoff(T4CConnection.java:574)
+	... 14 common frames omitted

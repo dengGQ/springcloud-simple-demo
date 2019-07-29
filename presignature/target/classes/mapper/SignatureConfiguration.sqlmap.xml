@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fotic.it.support.signature.dao.mapper.SignatureConfigurationMapper">
+
+    <resultMap type="com.fotic.it.support.signature.dao.entity.SignatureConfiguration" id="SignatureConfigurationMap">
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="signtype" column="SIGNTYPE" jdbcType="VARCHAR"/>
+        <result property="signanchortext" column="SIGNANCHORTEXT" jdbcType="VARCHAR"/>
+        <result property="signpage" column="SIGNPAGE" jdbcType="INTEGER"/>
+        <result property="signnumber" column="SIGNNUMBER" jdbcType="VARCHAR"/>
+        <result property="inputpath" column="INPUTPATH" jdbcType="VARCHAR"/>
+        <result property="outputpath" column="OUTPUTPATH" jdbcType="VARCHAR"/>
+        <result property="signcycle" column="SIGNCYCLE" jdbcType="INTEGER"/>
+        <result property="signcyclename" column="SIGNCYCLENAME" jdbcType="VARCHAR"/>
+        <result property="lasttime" column="LASTTIME" jdbcType="OTHER"/>
+        <result property="remark" column="REMARK" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--通过Id查询记录-->
+    <select id="findAllById" resultMap="SignatureConfigurationMap">
+        select
+          ID, SIGNTYPE, SIGNANCHORTEXT, SIGNPAGE, SIGNNUMBER, INPUTPATH, OUTPUTPATH, SIGNCYCLE, SIGNCYCLENAME, LASTTIME, REMARK
+        from SIGNATURE_CONFIGURATION
+        where ID = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SignatureConfigurationMap">
+        select
+          ID, SIGNTYPE, SIGNANCHORTEXT, SIGNPAGE, SIGNNUMBER, INPUTPATH, OUTPUTPATH, SIGNCYCLE, SIGNCYCLENAME, LASTTIME, REMARK
+        from SIGNATURE_CONFIGURATION
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SignatureConfigurationMap">
+        select
+          ID, SIGNTYPE, SIGNANCHORTEXT, SIGNPAGE, SIGNNUMBER, INPUTPATH, OUTPUTPATH, SIGNCYCLE, SIGNCYCLENAME, LASTTIME, REMARK
+        from SIGNATURE_CONFIGURATION
+        <where>
+            <if test="id != null">
+                and ID = #{id}
+            </if>
+            <if test="signtype != null and signtype != ''">
+                and SIGNTYPE = #{signtype}
+            </if>
+            <if test="signanchortext != null and signanchortext != ''">
+                and SIGNANCHORTEXT = #{signanchortext}
+            </if>
+            <if test="signpage != null">
+                and SIGNPAGE = #{signpage}
+            </if>
+            <if test="signnumber != null and signnumber != ''">
+                and SIGNNUMBER = #{signnumber}
+            </if>
+            <if test="inputpath != null and inputpath != ''">
+                and INPUTPATH = #{inputpath}
+            </if>
+            <if test="outputpath != null and outputpath != ''">
+                and OUTPUTPATH = #{outputpath}
+            </if>
+            <if test="signcycle != null">
+                and SIGNCYCLE = #{signcycle}
+            </if>
+            <if test="signcyclename != null and signcyclename != ''">
+                and SIGNCYCLENAME = #{signcyclename}
+            </if>
+            <if test="lasttime != null">
+                and LASTTIME = #{lasttime}
+            </if>
+            <if test="remark != null and remark != ''">
+                and REMARK = #{remark}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="false">
+        insert into SIGNATURE_CONFIGURATION(SIGNTYPE, SIGNANCHORTEXT, SIGNPAGE, SIGNNUMBER, INPUTPATH, OUTPUTPATH, SIGNCYCLE, SIGNCYCLENAME, LASTTIME, REMARK)
+        values (#{signtype}, #{signanchortext}, #{signpage}, #{signnumber}, #{inputpath}, #{outputpath}, #{signcycle}, #{signcyclename}, #{lasttime}, #{remark})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update SIGNATURE_CONFIGURATION
+        <set>
+            <if test="signtype != null and signtype != ''">
+                SIGNTYPE = #{signtype},
+            </if>
+            <if test="signanchortext != null and signanchortext != ''">
+                SIGNANCHORTEXT = #{signanchortext},
+            </if>
+            <if test="signpage != null">
+                SIGNPAGE = #{signpage},
+            </if>
+            <if test="signnumber != null and signnumber != ''">
+                SIGNNUMBER = #{signnumber},
+            </if>
+            <if test="inputpath != null and inputpath != ''">
+                INPUTPATH = #{inputpath},
+            </if>
+            <if test="outputpath != null and outputpath != ''">
+                OUTPUTPATH = #{outputpath},
+            </if>
+            <if test="signcycle != null">
+                SIGNCYCLE = #{signcycle},
+            </if>
+            <if test="signcyclename != null and signcyclename != ''">
+                SIGNCYCLENAME = #{signcyclename},
+            </if>
+            <if test="lasttime != null">
+                LASTTIME = #{lasttime},
+            </if>
+            <if test="remark != null and remark != ''">
+                REMARK = #{remark},
+            </if>
+        </set>
+        where ID = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from SIGNATURE_CONFIGURATION where ID = #{id}
+    </delete>
+
+</mapper>

@@ -1,0 +1,65 @@
+package com.dgq.quartz.entity;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.apache.ibatis.annotations.SelectKey;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.ToString;
+import tk.mybatis.mapper.annotation.KeySql;
+
+/**
+ * @ClassName: 定时任务详细表
+ * @author dgq
+ * @date 2019年7月26日
+ */
+@Data
+@ToString
+@Table(name = "quartz_task_info")
+public class QuartzTaskInfo implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@KeySql(useGeneratedKeys = true)
+	@ApiModelProperty(hidden = true)
+	private Long id;
+
+	@ApiModelProperty(notes = "任务编号", example = "1004")
+    private String taskNo;
+
+    @ApiModelProperty(notes = "执行方", example = "once")
+    private String executor;
+
+    @ApiModelProperty(notes = "任务名称", example = "werrrr")
+    private String taskName;
+
+    @ApiModelProperty(example = "0 55 9 26 7 ? 2019")
+    private String cronExpression;
+
+    @ApiModelProperty(notes = "0: 等待 1：暂停 2：正常执行 3：阻塞  4：错误")
+    private Integer status;
+    
+    @ApiModelProperty(notes = "状态改变时间")
+    private LocalDateTime statusChangeTime;
+    
+    @ApiModelProperty(notes = "触发类型", example = "http")
+    private String sendType;
+
+    @ApiModelProperty(notes = "请求地址", example = "https://www.baidu.com")
+    private String url;
+
+    @ApiModelProperty(notes = "执行参数", example = "{\"id\":\"1234565\"}")
+    private String executeParamter;
+
+    @ApiModelProperty(hidden = true)
+    private LocalDateTime createTime;
+
+    @ApiModelProperty(hidden = true)
+    private LocalDateTime lastModifyTime;
+}
