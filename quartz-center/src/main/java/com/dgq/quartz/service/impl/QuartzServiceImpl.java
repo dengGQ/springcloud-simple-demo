@@ -2,6 +2,7 @@ package com.dgq.quartz.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.quartz.CronExpression;
@@ -22,13 +23,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.dgq.quartz.commons.page.ResultPage;
+import com.dgq.quartz.commons.page.ResultPageFactory;
 import com.dgq.quartz.entity.QuartzTaskInfo;
 import com.dgq.quartz.job.QuartzMainJobFactory;
 import com.dgq.quartz.mapper.QuartzTaskInfoMapper;
 import com.dgq.quartz.service.QuartzService;
 import com.dgq.quartz.util.ResultEnum;
 import com.dgq.quartz.util.ResultUtil;
+import com.github.pagehelper.PageHelper;
 import com.google.gson.Gson;
+
+import tk.mybatis.mapper.entity.Example;
+import tk.mybatis.mapper.entity.Example.Criteria;
 
 @Service
 public class QuartzServiceImpl implements QuartzService {
@@ -43,6 +50,15 @@ public class QuartzServiceImpl implements QuartzService {
 	@Autowired
 	private QuartzTaskInfoMapper mapper;
 
+	@Override
+	public ResultPage listForPage(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception {
+		PageHelper.startPage(pageNum, pageSize);
+		
+		List<QuartzTaskInfo> list = mapper.queryEntityList(taskInfo);
+		
+		return ResultPageFactory.newIntance().build(list);
+	}
+	
     @Override
     public String addTask(QuartzTaskInfo taskInfo) {
         try {
@@ -91,7 +107,9 @@ public class QuartzServiceImpl implements QuartzService {
     		if (!scheduler.checkExists(jobKey)) {
     			return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
     		}
-
+    		
+    		updateQuartzTaskInfo(taskInfo);
+    		
     		//修改触发器
     		CronTrigger oldtrigger = (CronTrigger) scheduler.getTrigger(TriggerKey.triggerKey(taskInfo.getTaskNo(), taskInfo.getExecutor()));
     		Trigger newTrigger = oldtrigger.getTriggerBuilder()
@@ -101,7 +119,11 @@ public class QuartzServiceImpl implements QuartzService {
     		JobDetail jobDetail = scheduler.getJobDetail(jobKey);
     		updateJobData(taskInfo, jobDetail);
     		
-    		scheduler.rescheduleJob(oldtrigger.getKey(), newTrigger);
+//    		scheduler.rescheduleJob(oldtrigger.getKey(), newTrigger);
+    		
+    		//quartz不支持修改job,只能修改trigger，所以这里采取先删除后新增的方式模拟修改
+    		scheduler.deleteJob(jobKey);
+    		scheduler.scheduleJob(jobDetail, newTrigger);
     		
     		return ResultUtil.success();
     	} catch (Exception e) {
@@ -199,6 +221,17 @@ public class QuartzServiceImpl implements QuartzService {
 	}
     private QuartzTaskInfo setInitialValue(QuartzTaskInfo taskInfo) {
     	taskInfo.setCreateTime(LocalDateTime.now());
+    	taskInfo.setLastModifyTime(LocalDateTime.now());
     	return taskInfo;
+	}
+
+	@Override
+	public void updateQuartzTaskInfo(QuartzTaskInfo taskInfo) {
+		Example example = new Example(QuartzTaskInfo.class);
+		Criteria criteria = example.createCriteria();
+		criteria.andEqualTo("taskNo", taskInfo.getTaskNo());
+		criteria.andEqualTo("executor", taskInfo.getExecutor());
+		taskInfo.setLastModifyTime(LocalDateTime.now());
+		mapper.updateByExampleSelective(taskInfo, example);
 	}
 }

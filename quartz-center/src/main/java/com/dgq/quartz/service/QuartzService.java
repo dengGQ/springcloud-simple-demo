@@ -2,9 +2,13 @@ package com.dgq.quartz.service;
 
 import org.quartz.SchedulerException;
 
+import com.dgq.quartz.commons.page.ResultPage;
 import com.dgq.quartz.entity.QuartzTaskInfo;
 
 public interface QuartzService {
+	
+	
+	ResultPage listForPage(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception;
 	
 	/**
      * 新增一个job
@@ -51,5 +55,7 @@ public interface QuartzService {
 	 * 启动调度器
 	 */
 	String start();
+	
+	void updateQuartzTaskInfo(QuartzTaskInfo taskInfo);
 }
 

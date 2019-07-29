@@ -41,8 +41,6 @@ public class TaskExecuteRecord implements Serializable{
 	
 	private LocalDateTime createTime;
 	
-	private LocalDateTime lastModifyTime;
-	
 	private String url;
 	
 	private String executeParameter;

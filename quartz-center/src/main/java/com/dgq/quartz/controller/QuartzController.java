@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dgq.quartz.commons.page.ResultPage;
 import com.dgq.quartz.entity.QuartzTaskInfo;
 import com.dgq.quartz.service.QuartzService;
 
@@ -23,6 +25,17 @@ public class QuartzController {
 	
 	@Autowired
 	private QuartzService quartzService;
+	
+	
+	@ApiOperation(value = "分页查询任务列表")
+	@PostMapping("/list")
+	public ResultPage listForPage(@RequestBody QuartzTaskInfo taskInfo, 
+			@RequestParam(defaultValue = "1")int pageNum,
+			@RequestParam(defaultValue = "30")int pageSize) throws Exception {
+	
+		ResultPage resultPage = quartzService.listForPage(taskInfo, pageNum, pageSize);
+		return resultPage;
+	}
 	
 	@ApiOperation(value = "新增定时任务")
 	@PostMapping("/add")
