@@ -30,21 +30,28 @@ public class TaskExecuteRecord implements Serializable{
 	@ApiModelProperty(hidden = true)
 	private Long id;
 	
-	//taskNo+"-"+executor
+	@ApiModelProperty(notes = "任务Id, taskNo-executor")
 	private String taskId;
 	
+	@ApiModelProperty(notes = "最后执行时间")
 	private LocalDateTime lastExecuteTime;
 	
+	@ApiModelProperty(notes = "执行状态")
 	private Integer executeStatus; // 0: 成功，1：失败  2：异常
 	
+	@ApiModelProperty(notes = "失败原因")
 	private String failReason;
 	
+	@ApiModelProperty(notes = "创建时间")
 	private LocalDateTime createTime;
 	
+	@ApiModelProperty(notes = "请求地址")
 	private String url;
 	
+	@ApiModelProperty(notes = "执行参数")
 	private String executeParameter;
 	
+	@ApiModelProperty(notes = "触发规则")
 	private String cronExpression;
 
 	public TaskExecuteRecord() {

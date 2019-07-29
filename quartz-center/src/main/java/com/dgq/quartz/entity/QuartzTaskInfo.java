@@ -36,7 +36,7 @@ public class QuartzTaskInfo implements Serializable{
     @ApiModelProperty(notes = "任务名称", example = "werrrr")
     private String taskName;
 
-    @ApiModelProperty(example = "0 55 9 26 7 ? 2019")
+    @ApiModelProperty(notes = "触发规则", example = "0 55 9 26 7 ? 2019")
     private String cronExpression;
     
     @ApiModelProperty(notes = "触发类型", example = "http")
@@ -48,9 +48,9 @@ public class QuartzTaskInfo implements Serializable{
     @ApiModelProperty(notes = "执行参数", example = "{\"id\":\"1234565\"}")
     private String executeParamter;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(notes = "创建时间", hidden = true)
     private LocalDateTime createTime;
 
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(notes = "最后修改时间", hidden = true)
     private LocalDateTime lastModifyTime;
 }
