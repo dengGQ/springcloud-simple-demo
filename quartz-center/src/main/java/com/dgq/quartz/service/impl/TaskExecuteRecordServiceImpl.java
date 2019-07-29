@@ -22,25 +22,28 @@ public class TaskExecuteRecordServiceImpl extends BaseAbstractServiceImpl<TaskEx
 	public TaskExecuteRecord addTaskExecuteRecord(TaskExecuteRecord record) throws BusinessException{
 		try {
 			List<TaskExecuteRecord> records = mapper.find(record.getTaskId());
+			TaskExecuteRecord tr = null;
 			if(records.size() < 5) {
 				
-				record = new TaskExecuteRecord();
+				tr = new TaskExecuteRecord();
 				
-				record.setCreateTime(LocalDateTime.now());
-				record.setTaskId(record.getTaskId());
-				record.setLastExecuteTime(LocalDateTime.now());
+				tr.setCreateTime(LocalDateTime.now());
+				tr.setTaskId(record.getTaskId());
+				tr.setLastExecuteTime(LocalDateTime.now());
 				
-				record.setUrl(record.getUrl());
-				record.setCronExpression(record.getCronExpression());
-				record.setExecuteParameter(record.getExecuteParameter());
-				mapper.insert(record);
+				tr.setUrl(record.getUrl());
+				tr.setCronExpression(record.getCronExpression());
+				tr.setExecuteParameter(record.getExecuteParameter());
+				tr.setExecuteStatus(record.getExecuteStatus());
+				mapper.insert(tr);
 			}else{
-				record = records.get(0);
-				record.setLastExecuteTime(LocalDateTime.now());
-				record.setUrl(record.getUrl());
-				record.setCronExpression(record.getCronExpression());
-				record.setExecuteParameter(record.getExecuteParameter());
-				mapper.updateByPrimaryKey(record);
+				tr = records.get(0);
+				tr.setLastExecuteTime(LocalDateTime.now());
+				tr.setUrl(record.getUrl());
+				tr.setCronExpression(record.getCronExpression());
+				tr.setExecuteParameter(record.getExecuteParameter());
+				tr.setExecuteStatus(record.getExecuteStatus());
+				mapper.updateByPrimaryKey(tr);
 			}
 			return record;
 		} catch (Exception e) {

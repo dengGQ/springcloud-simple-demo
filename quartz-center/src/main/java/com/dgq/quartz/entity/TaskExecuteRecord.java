@@ -3,11 +3,14 @@ package com.dgq.quartz.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
+import tk.mybatis.mapper.annotation.KeySql;
 
 /**
  * 定时任务执行记录表
@@ -22,6 +25,9 @@ public class TaskExecuteRecord implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@KeySql(useGeneratedKeys = true)
+	@ApiModelProperty(hidden = true)
 	private Long id;
 	
 	//taskNo+"-"+executor

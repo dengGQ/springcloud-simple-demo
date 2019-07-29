@@ -3,11 +3,8 @@ package com.dgq.quartz.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.apache.ibatis.annotations.SelectKey;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -41,12 +38,6 @@ public class QuartzTaskInfo implements Serializable{
 
     @ApiModelProperty(example = "0 55 9 26 7 ? 2019")
     private String cronExpression;
-
-    @ApiModelProperty(notes = "0: 等待 1：暂停 2：正常执行 3：阻塞  4：错误")
-    private Integer status;
-    
-    @ApiModelProperty(notes = "状态改变时间")
-    private LocalDateTime statusChangeTime;
     
     @ApiModelProperty(notes = "触发类型", example = "http")
     private String sendType;

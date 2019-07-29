@@ -28,7 +28,6 @@ import com.dgq.quartz.mapper.QuartzTaskInfoMapper;
 import com.dgq.quartz.service.QuartzService;
 import com.dgq.quartz.util.ResultEnum;
 import com.dgq.quartz.util.ResultUtil;
-import com.dgq.quartz.util.StatusEnum;
 import com.google.gson.Gson;
 
 @Service
@@ -199,9 +198,7 @@ public class QuartzServiceImpl implements QuartzService {
     	jobDataMap.putAll(assembleJobData(taskInfo));
 	}
     private QuartzTaskInfo setInitialValue(QuartzTaskInfo taskInfo) {
-		
     	taskInfo.setCreateTime(LocalDateTime.now());
-    	taskInfo.setStatus(StatusEnum.WAITING.getCode());
     	return taskInfo;
 	}
 }
