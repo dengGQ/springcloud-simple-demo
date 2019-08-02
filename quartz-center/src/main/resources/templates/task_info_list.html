@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-control" content="no-cache">
+    <title>定时任务管理平台</title>
+	<base th:href="${#request.getContextPath()}+'/'">
+    <link href="plug-in/hplus/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="plug-in/hplus/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="plug-in/hplus/css/animate.min.css" rel="stylesheet">
+    <link href="plug-in/hplus/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" href="plug-in/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="plug-in/bootstrap/3.3.7/css/My_bootstrap.css">
+    <script src="plug-in/jquery/1.10.2/jquery.js"></script>
+	<script src="plug-in/hplus/js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="plug-in/bootstrap-table/bootstrap-table.js"></script>
+	<script src="plug-in/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="plug-in/layer/layer.js"></script>
+	<script src="js/util.js"></script>
+    <style type="text/css">
+    	.btn-margin{margin-right: 5px;}
+    	.btn-container{position: absolute;right: 53px;}
+    	.btn-red-bgcolor, .btn-red-bgcolor:hover{background-color: black; border-color: black;}
+    	.btn-black-bgcolor, .btn-black-bgcolor:hover{background-color: red; border-color: red;}
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row base-margin" id="query">
+	        <form class="form-inline" role="form"  method="post" id="queryForm">
+	        	<div class="form-group">
+					<label>执行方:</label> 
+					<input placeholder="执行方" class="form-control layer-date" id="executor" name="executor"> 
+				</div>
+				<div class="form-group">
+					<label >任务名称:</label> 
+					<input placeholder="任务名称" class="form-control layer-date" id="taskName" name="taskName" >
+				</div>
+				<div class="form-group btn-container">
+					<button type="button" id="queryBtn" class="btn btn-primary">查询</button>
+				 	<button type="button" id="resetBtn" class="btn btn-primary">重置</button> 
+	                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addQuartzTaskBtn">添加定时任务</button>
+				</div>
+	        </form>
+	    </div>
+	    <div class="container fit-body">
+	        <table id="quart-info-table" > </table>
+	    </div>
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="addQuartzTaskBtn" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">新增定时任务</h4>
+				</div>
+				<div>
+					<form class="form-inline" role="form"  method="post" id="addFrom">
+						<div class="form-group">
+							<label>任务编号:</label>
+							<input placeholder="请填写任务编号" class="form-control layer-date" name="taskNo">
+							<label>执&nbsp&nbsp行&nbsp&nbsp方:</label>
+							<input placeholder="请填写执行方" class="form-control layer-date" name="executor"> 
+							<label >任务名称:</label>
+							<input placeholder="请填写任务名称" class="form-control layer-date" name="taskName">
+							<label >触发规则:</label>
+							<input placeholder="请填写触发规则" id="crongenerator" class="form-control layer-date" name="cronExpression" readonly="readonly">
+							<label >触发类型:</label>
+							<input placeholder="请填写触发类型" class="form-control layer-date" name="sendType">
+							<label >请求地址:</label>
+							<input placeholder="请填写请求地址" class="form-control layer-date" name="url">
+							<label >执行参数:</label>
+							<input placeholder="请填写执行参数" class="form-control layer-date" name="executeParamter">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" id="saveBtn" class="btn btn-primary">保存</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+	
+<script>
+	var crongeneratorlayerIndex = undefined;
+	$(function () {
+		initTable();
+		
+		$("#queryBtn").click(function() {
+			$('#quart-info-table').bootstrapTable( 'refresh');
+		});
+		
+		$("#resetBtn").click(function() {
+			$('#queryForm')[0].reset()
+		});
+		
+		$("#saveBtn").click(function() {
+			var formObject = $("#addFrom").serializeObject();
+	        $.ajax({
+	            url:"quartzMgr/add",
+	            type:"post",
+	            contentType: "application/json; charset=utf-8",
+	            data: JSON.stringify(formObject),
+	            dataType: "json",
+	            success:function(result){
+	            	layer.alert(result.message);
+	            	$("#addQuartzTaskBtn").modal('hide')
+	            	$('#quart-info-table').bootstrapTable( 'refresh');
+	            },
+	            error:function(e){
+	            }
+	        });
+		});
+		
+		$("#pauseBtn").click(function(){
+			$.ajax({
+	            url:"quartzMgr/add",
+	            type:"post",
+	            contentType: "application/json; charset=utf-8",
+	            data: JSON.stringify(formObject),
+	            dataType: "json",
+	            success:function(result){
+	            	layer.alert(result.message);
+	            },
+	            error:function(e){
+	            }
+	        });
+		})
+		
+		$("#crongenerator").click(function(){
+			var url = "quartzMgr/cronpage";
+			crongeneratorlayerIndex = layer.open({
+				title: 'cron生成器',
+				type: 2,
+				content: 'cron/cron.html',
+				area: ['1000px', '550px']
+			})
+			
+		})
+	});
+	
+	function tableHeight() {
+		var window_height = $(window).height();
+		var obj_off_y = $(".fit-body").offset().top;
+		var result_height = window_height - obj_off_y;
+		return result_height;
+	}
+	
+	function initTable(urls) {
+		$('#quart-info-table').bootstrapTable({
+			url : 'quartzMgr/list',
+			method : 'POST',
+			contentType: "application/json",
+			showRefresh : true,
+			height:tableHeight(),
+			clickToSelect : true,
+			showToggle : true,
+			pageSize : 10,
+			pagination:true,
+			queryParams : function(params) {
+				return JSON.stringify({
+						pageSize: params.pageSize, 
+						pageNumber: params.pageNumber,
+						taskInfo: {
+							taskName: $("#taskName").val(), 
+							executor: $("#executor").val()
+						}
+					});
+			},
+			columns :  [
+				{ checkbox : true}, 
+				{ field: '',title: '序号',valign : 'left',formatter: function (value, row, index) {return index+1;}},
+		        { field: 'taskNo', title: '任务编号', align: 'center', valign : 'middle'}, 
+		        { field: 'executor', title: '执行方', align : 'center', valign : 'middle'}, 
+		        { field: 'taskName', title: '任务名称', align : 'center', valign : 'middle'},
+		        { field: 'cronExpression', title: '触发规则', align : 'center', valign : 'middle'}, 
+		        { field: 'sendType', title: '触发类型', align : 'center', valign : 'middle'}, 
+		        { field: 'url', title: '请求地址', align : 'center', valign : 'middle'},
+		        { field: 'executeParamter', title: '执行参数', align : 'center', valign : 'middle', width: '100px'},
+		        { field: 'createTime', title: '创建时间', align : 'center', valign : 'middle'},
+		        { title: '操作', align : 'center', valign : 'middle', width: '200px', formatter: function(value, row, index){
+		        	var startupOnceBtn = "<button id='runOnce' type='button' class='btn btn-primary btn-margin'>立即执行</button>";
+		        	var pauseTaskBtn = "<button onclick='javascript: pauseTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin btn-red-bgcolor'>暂停</button>";
+		        	var resumeTaskBtn = "<button onclick='javascript: resumeTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin'>启动</button>";
+		        	var delTaskBtn = "<button onclick='javascript: delTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin btn-black-bgcolor'>删除</button>";
+		        	if(row.frozenStatus=='FROZEN'){
+			        	return startupOnceBtn + pauseTaskBtn + delTaskBtn;
+		        	}else{
+			        	return startupOnceBtn + resumeTaskBtn + delTaskBtn;
+		        	}
+		        }},
+		    ]
+		});
+	}
+	
+	function pauseTaskFunc(self, taskNo, executor) {
+		$.ajax({
+            url:"quartzMgr/pause",
+            type:"post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"taskNo": taskNo, "executor": executor}),
+            dataType: "json",
+            success:function(result){
+            	layer.alert(result.message);
+            	$('#quart-info-table').bootstrapTable( 'refresh');
+            	
+            },
+            error:function(e){
+            }
+        });
+	}
+	
+	function resumeTaskFunc(self, taskNo, executor) {
+		$.ajax({
+            url:"quartzMgr/resume",
+            type:"post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"taskNo": taskNo, "executor": executor}),
+            dataType: "json",
+            success:function(result){
+            	layer.alert(result.message);
+            	$('#quart-info-table').bootstrapTable( 'refresh');
+            },
+            error:function(e){
+            }
+        });
+	}
+	function delTaskFunc(self, taskNo, executor) {
+		$.ajax({
+            url:"quartzMgr/del",
+            type:"post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"taskNo": taskNo, "executor": executor}),
+            dataType: "json",
+            success:function(result){
+            	layer.alert(result.message);
+            	$('#quart-info-table').bootstrapTable( 'refresh');
+            },
+            error:function(e){
+            }
+        });
+	}
+</script>
+</body>
+</html>
