@@ -36,10 +36,10 @@ public class TaskExecuteRecord implements Serializable{
 	private Long id;
 	
 	@ApiModelProperty(notes = "任务Id, taskNo-executor")
-	 @QueryType(QueryTypeEnum.LIKE)
+	@QueryType(QueryTypeEnum.LIKE)
 	private String taskId;
 	
-	@QueryType(QueryTypeEnum.EQUALS)
+	@QueryType(QueryTypeEnum.LIKE)
 	@ApiModelProperty(notes = "任务名称")
 	private String taskName;
 	

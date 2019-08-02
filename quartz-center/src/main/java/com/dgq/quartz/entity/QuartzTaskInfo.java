@@ -42,7 +42,7 @@ public class QuartzTaskInfo implements Serializable{
     private String executor;
 
     @ApiModelProperty(notes = "任务名称", example = "werrrr")
-    @QueryType(QueryTypeEnum.EQUALS)
+    @QueryType(QueryTypeEnum.LIKE)
     private String taskName;
 
     @ApiModelProperty(notes = "触发规则", example = "0 55 9 26 7 ? 2019")
