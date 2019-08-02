@@ -44,7 +44,7 @@ public class QuartzMainJobFactory implements Job{
 		logger.info("定时任务被执行，taskNo:{}, 执行方：{} , 任务名称:{}, url:{}, 触发规则：{}, 执行参数:{}, sendtype:{}", 
 				taskNo, executor, taskName, url, cronExpress, executeParams, sendType);
 		String taskId = String.join("-", taskNo, executor);
-		TaskExecuteRecord record = new TaskExecuteRecord(taskId, url, executeParams, cronExpress);
+		TaskExecuteRecord record = new TaskExecuteRecord(taskId, taskName, cronExpress);
 		try {
 			if(ResultEnum.HTTP.getMessage().equals(sendType)) {
 				//发送任务请求

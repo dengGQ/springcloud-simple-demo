@@ -22,21 +22,16 @@ public class TaskExecuteRecordServiceImpl extends BaseAbstractServiceImpl<TaskEx
 	public TaskExecuteRecord addTaskExecuteRecord(TaskExecuteRecord record) throws BusinessException{
 		try {
 			List<TaskExecuteRecord> records = mapper.find(record.getTaskId());
+			record.setLastExecuteTime(LocalDateTime.now());
 			if(records.size() < 5) {
 				record.setCreateTime(LocalDateTime.now());
-				record.setLastExecuteTime(LocalDateTime.now());
 				mapper.insert(record);
-				return record;
 			}else{
 				TaskExecuteRecord tr = records.get(0);
-				tr.setLastExecuteTime(LocalDateTime.now());
-				tr.setUrl(record.getUrl());
-				tr.setCronExpression(record.getCronExpression());
-				tr.setExecuteParameter(record.getExecuteParameter());
-				tr.setExecuteStatus(record.getExecuteStatus());
-				mapper.updateByPrimaryKey(tr);
-				return tr;
+				record.setId(tr.getId());
+				mapper.updateByPrimaryKeySelective(record);
 			}
+			return record;
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new BusinessException(e.getMessage());

@@ -6,8 +6,13 @@ import java.time.LocalDateTime;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.dgq.quartz.commons.annotation.QueryType;
+import com.dgq.quartz.commons.annotation.QueryTypeEnum;
+
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import tk.mybatis.mapper.annotation.KeySql;
 
@@ -19,6 +24,8 @@ import tk.mybatis.mapper.annotation.KeySql;
 @Data
 @ToString
 @Table(name = "quartz_task_info")
+@AllArgsConstructor
+@NoArgsConstructor
 public class QuartzTaskInfo implements Serializable{
 	private static final long serialVersionUID = 1L;
 
@@ -31,9 +38,11 @@ public class QuartzTaskInfo implements Serializable{
     private String taskNo;
 
     @ApiModelProperty(notes = "执行方", example = "once")
+    @QueryType(QueryTypeEnum.EQUALS)
     private String executor;
 
     @ApiModelProperty(notes = "任务名称", example = "werrrr")
+    @QueryType(QueryTypeEnum.EQUALS)
     private String taskName;
 
     @ApiModelProperty(notes = "触发规则", example = "0 55 9 26 7 ? 2019")
@@ -48,9 +57,18 @@ public class QuartzTaskInfo implements Serializable{
     @ApiModelProperty(notes = "执行参数", example = "{\"id\":\"1234565\"}")
     private String executeParamter;
 
+    @ApiModelProperty(notes = "冻结状态", example = "0")
+    private String frozenStatus;
+    
     @ApiModelProperty(notes = "创建时间", hidden = true)
     private LocalDateTime createTime;
 
     @ApiModelProperty(notes = "最后修改时间", hidden = true)
     private LocalDateTime lastModifyTime;
+
+	public QuartzTaskInfo(String taskNo, String executor) {
+		super();
+		this.taskNo = taskNo;
+		this.executor = executor;
+	}
 }

@@ -1,8 +1,8 @@
 package com.dgq.quartz.commons.service;
 
-import com.github.pagehelper.PageInfo;
-
 import java.util.List;
+
+import com.dgq.quartz.commons.page.ResultPage;
 
 /**
  * 通用service
@@ -84,7 +84,7 @@ public interface BaseService<T> {
      * @return
      * @
      */
-    PageInfo<T> queryEntityListForPage(T t, int pageNum, int pageSize) ;
+    ResultPage queryEntityListForPage(T t, int pageNum, int pageSize) ;
 
     /**
      * <p>分页查询</p>
@@ -97,7 +97,7 @@ public interface BaseService<T> {
      * @return
      * @
      */
-    PageInfo<T> queryEntityListForPage(T t, int pageNum, int pageSize, String orderby) ;
+    ResultPage queryEntityListForPage(T t, int pageNum, int pageSize, String orderby) ;
 
     /**
      * 根据主键修改实体，修改为空字段

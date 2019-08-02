@@ -1,12 +1,18 @@
 package com.dgq.quartz.service;
 
+
+import java.util.List;
+
 import org.quartz.SchedulerException;
 
 import com.dgq.quartz.commons.page.ResultPage;
+import com.dgq.quartz.commons.service.BaseService;
+import com.dgq.quartz.dto.QuartzTaskInfoDTO;
 import com.dgq.quartz.entity.QuartzTaskInfo;
 
-public interface QuartzService {
+public interface QuartzService extends BaseService<QuartzTaskInfo>{
 	
+	List<QuartzTaskInfo> listQuartzTaskInfos(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception;
 	
 	ResultPage listForPage(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception;
 	
@@ -32,19 +38,19 @@ public interface QuartzService {
      * @param taskInfo
      * @throws Exception
      */
-	String delTask(QuartzTaskInfo taskInfo) throws Exception;
+	String delTask(QuartzTaskInfoDTO dto) throws Exception;
 	
 	/** 
      * 恢复任务 
      * @param taskInfo
      */
-	String resumeTask(QuartzTaskInfo taskInfo);
+	String resumeTask(QuartzTaskInfoDTO dto);
 	
 	/**
 	 * 暂停定时任务
 	 * @param @param taskInfo
 	 */
-	String pauseTask(QuartzTaskInfo taskInfo);
+	String pauseTask(QuartzTaskInfoDTO dto);
 	
 	/**
 	 * 暂停调度器
@@ -56,6 +62,30 @@ public interface QuartzService {
 	 */
 	String start();
 	
-	void updateQuartzTaskInfo(QuartzTaskInfo taskInfo);
+	/**
+	 * 根据taskNo和executor修改参数对象中不为空的字段，忽略为空字段
+	 * @param @param taskInfo    参数
+	 * @return void    返回类型
+	 * @throws
+	 */
+	void updateQuartzTaskInfoSelective(QuartzTaskInfo taskInfo);
+	
+	/**
+	 * @Description: 根据taskNo和executor修改cron表达式
+	 * @param @param taskInfo    参数
+	 * @return void    返回类型
+	 * @throws
+	 */
+	void updateQuartzTaskInfoOfCronExpression(QuartzTaskInfo taskInfo);
+	
+	/**
+	 * @Description: 根据taskNo和executor修改冻结状态
+	 * @param @param taskInfo    参数
+	 * @return void    返回类型
+	 * @throws
+	 */
+	void updateQuartzTaskInfoOfFrozenStatus(QuartzTaskInfo taskInfo);
+	
+	void delQuartzTaskInfo(String taskNo, String executor);
 }
 

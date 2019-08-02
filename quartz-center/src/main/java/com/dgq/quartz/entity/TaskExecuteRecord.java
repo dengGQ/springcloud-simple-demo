@@ -6,9 +6,13 @@ import java.time.LocalDateTime;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.dgq.quartz.commons.annotation.QueryType;
+import com.dgq.quartz.commons.annotation.QueryTypeEnum;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import tk.mybatis.mapper.annotation.KeySql;
 
@@ -17,10 +21,11 @@ import tk.mybatis.mapper.annotation.KeySql;
  * @author dgq
  * @date 2019年7月26日
  */
-@AllArgsConstructor
 @Data
 @ToString
 @Table(name = "task_execute_record")
+@AllArgsConstructor
+@NoArgsConstructor
 public class TaskExecuteRecord implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -31,7 +36,12 @@ public class TaskExecuteRecord implements Serializable{
 	private Long id;
 	
 	@ApiModelProperty(notes = "任务Id, taskNo-executor")
+	 @QueryType(QueryTypeEnum.LIKE)
 	private String taskId;
+	
+	@QueryType(QueryTypeEnum.EQUALS)
+	@ApiModelProperty(notes = "任务名称")
+	private String taskName;
 	
 	@ApiModelProperty(notes = "最后执行时间")
 	private LocalDateTime lastExecuteTime;
@@ -45,24 +55,19 @@ public class TaskExecuteRecord implements Serializable{
 	@ApiModelProperty(notes = "创建时间")
 	private LocalDateTime createTime;
 	
-	@ApiModelProperty(notes = "请求地址")
-	private String url;
-	
-	@ApiModelProperty(notes = "执行参数")
-	private String executeParameter;
+	/*
+	 * @ApiModelProperty(notes = "请求地址") private String url;
+	 * 
+	 * @ApiModelProperty(notes = "执行参数") private String executeParameter;
+	 */
 	
 	@ApiModelProperty(notes = "触发规则")
 	private String cronExpression;
 
-	public TaskExecuteRecord() {
-		super();
-	}
-
-	public TaskExecuteRecord(String taskId, String url, String executeParameter, String cronExpression) {
+	public TaskExecuteRecord(String taskId, String taskName, String cronExpression) {
 		super();
 		this.taskId = taskId;
-		this.url = url;
-		this.executeParameter = executeParameter;
+		this.taskName = taskName;
 		this.cronExpression = cronExpression;
 	}
 }

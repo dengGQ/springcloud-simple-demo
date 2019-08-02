@@ -3,19 +3,18 @@ package com.dgq.quartz.util;
 /**
  * @ClassName ResultEnum
  * @Description 定义接口统一返回的code、message，方便维护
- * @Author simonsfan
+ * @Author dgq
  * @Date 2019/1/1
  * Version  1.0
  */
 public enum  ResultEnum {
-    SUCCESS(200,"success"),
-    FAIL(500,"system error"),
+    SUCCESS(200,"操作成功"),
+    FAIL(500,"系统异常，请联系管理员"),
     INIT(600,"record init"),
 
     TASKNO_EXIST(1001,"该任务已经存在"),
     TASKNO_NO_EXIST(1002,"该任务不存在"),
     CRON_INVALID(1003, "调度规则无效"),
-    RECORD_COUNT_LIMIT(1004, "同一条任务执行记录达到上限（5条）"),
 
     PARAM_EMPTY(6001,"参数是空"),
 

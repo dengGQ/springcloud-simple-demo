@@ -87,8 +87,8 @@ public interface CommonMapper<T> extends Mapper<T>, InsertListMapper<T>{
 					//取当前字段查询符号
 					QueryTypeEnum querytype = (QueryTypeEnum)AnnotationUtils.getAnnotationValueByAnnoAndMethodName(field.getAnnotation(QueryType.class), "value");
 					
-					//值为null不参与查询
-					if(Objects.nonNull(v)) {
+					//值为null|""不参与查询
+					if(!StringUtils.isEmpty(v)) {
 						//驼峰转换下划线
 						String columnName = StringUtils.HumpToUnderline(field.getName());
 						condition.append(" AND ");

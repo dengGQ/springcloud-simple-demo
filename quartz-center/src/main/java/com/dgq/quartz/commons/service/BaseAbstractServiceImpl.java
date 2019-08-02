@@ -7,8 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.dgq.quartz.commons.Exception.BusinessException;
 import com.dgq.quartz.commons.mapper.CommonMapper;
+import com.dgq.quartz.commons.page.ResultPage;
+import com.dgq.quartz.commons.page.ResultPageFactory;
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 
 /**
  * 通用抽象service
@@ -81,7 +82,7 @@ public abstract class BaseAbstractServiceImpl<T, D extends CommonMapper<T>> impl
     }
 
     @Override
-    public PageInfo<T> queryEntityListForPage(T t, int pageNum, int pageSize)  {
+    public ResultPage queryEntityListForPage(T t, int pageNum, int pageSize)  {
 
         try {
             return this.queryEntityListForPage(t, pageNum, pageSize, null);
@@ -91,11 +92,11 @@ public abstract class BaseAbstractServiceImpl<T, D extends CommonMapper<T>> impl
     }
 
     @Override
-    public PageInfo<T> queryEntityListForPage(T t, int pageNum, int pageSize, String orderby)  {
+    public ResultPage queryEntityListForPage(T t, int pageNum, int pageSize, String orderby)  {
         try {
             PageHelper.startPage(pageNum, pageSize);
             List<T> list = mapper.queryEntityList(t, orderby);
-            return new PageInfo<>(list);
+            return ResultPageFactory.newIntance().build(list);
         } catch (Exception e) {
             throw new BusinessException("分页查询异常！" + t.toString(), e);
         }

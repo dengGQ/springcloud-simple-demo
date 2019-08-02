@@ -19,12 +19,16 @@ import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.dgq.quartz.commons.page.ResultPage;
 import com.dgq.quartz.commons.page.ResultPageFactory;
+import com.dgq.quartz.commons.service.BaseAbstractServiceImpl;
+import com.dgq.quartz.dto.QuartzTaskInfoDTO;
 import com.dgq.quartz.entity.QuartzTaskInfo;
 import com.dgq.quartz.job.QuartzMainJobFactory;
 import com.dgq.quartz.mapper.QuartzTaskInfoMapper;
@@ -38,7 +42,7 @@ import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.entity.Example.Criteria;
 
 @Service
-public class QuartzServiceImpl implements QuartzService {
+public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, QuartzTaskInfoMapper> implements QuartzService {
 	
 	private static Logger logger = LoggerFactory.getLogger(QuartzServiceImpl.class);
 	public static final Gson GSON = new Gson();
@@ -51,20 +55,22 @@ public class QuartzServiceImpl implements QuartzService {
 	private QuartzTaskInfoMapper mapper;
 
 	@Override
-	public ResultPage listForPage(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception {
+	public List<QuartzTaskInfo> listQuartzTaskInfos(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception {
 		PageHelper.startPage(pageNum, pageSize);
-		
 		List<QuartzTaskInfo> list = mapper.queryEntityList(taskInfo);
-		
+		return list;
+	}
+	
+	@Override
+	public ResultPage listForPage(QuartzTaskInfo taskInfo, int pageNum, int pageSize) throws Exception {
+		List<QuartzTaskInfo> list = this.listQuartzTaskInfos(taskInfo, pageNum, pageSize);
 		return ResultPageFactory.newIntance().build(list);
 	}
 	
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String addTask(QuartzTaskInfo taskInfo) {
         try {
-        	
-        	mapper.insert(setInitialValue(taskInfo));
-        	logger.info("定时任务数据保存成功: {}", taskInfo);
         	
         	JobKey jobKey = JobKey.jobKey(taskInfo.getTaskNo(), taskInfo.getExecutor());
         	//判断cron表达式是否有效
@@ -74,6 +80,9 @@ public class QuartzServiceImpl implements QuartzService {
         	if(scheduler.checkExists(jobKey)){
         		return ResultUtil.success(ResultEnum.TASKNO_EXIST.getCode(), ResultEnum.TASKNO_EXIST.getMessage());
         	}
+        	
+        	mapper.insert(setInitialValue(taskInfo));
+        	logger.info("定时任务数据保存成功: {}", taskInfo);
         	
         	JobDetail jobDetail = scheduler.getJobDetail(jobKey);
         	jobDetail = JobBuilder.newJob(QuartzMainJobFactory.class).storeDurably()
@@ -90,9 +99,8 @@ public class QuartzServiceImpl implements QuartzService {
     		
     		return ResultUtil.success(taskInfo);
 		} catch (Exception e) {
-			logger.info("添加定时任务出现异常，参数：{}", taskInfo.toString());
-			e.printStackTrace();
-			return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage(), taskInfo);
+			logger.info("添加定时任务出现异常：{}，参数：{}", e.getMessage(), taskInfo.toString());
+			return ResultUtil.fail(ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMessage(), taskInfo);
 		}
     }
 
@@ -108,82 +116,82 @@ public class QuartzServiceImpl implements QuartzService {
     			return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
     		}
     		
-    		updateQuartzTaskInfo(taskInfo);
+    		updateQuartzTaskInfoOfCronExpression(taskInfo);
     		
     		//修改触发器
     		CronTrigger oldtrigger = (CronTrigger) scheduler.getTrigger(TriggerKey.triggerKey(taskInfo.getTaskNo(), taskInfo.getExecutor()));
     		Trigger newTrigger = oldtrigger.getTriggerBuilder()
     				.withSchedule(CronScheduleBuilder.cronSchedule(taskInfo.getCronExpression())).build();
     		
-    		//修改jobData
-    		JobDetail jobDetail = scheduler.getJobDetail(jobKey);
-    		updateJobData(taskInfo, jobDetail);
     		
-//    		scheduler.rescheduleJob(oldtrigger.getKey(), newTrigger);
-    		
-    		//quartz不支持修改job,只能修改trigger，所以这里采取先删除后新增的方式模拟修改
-    		scheduler.deleteJob(jobKey);
-    		scheduler.scheduleJob(jobDetail, newTrigger);
+    		scheduler.rescheduleJob(oldtrigger.getKey(), newTrigger);
     		
     		return ResultUtil.success();
     	} catch (Exception e) {
-			logger.info("修改定时任务失败，参数：{}", taskInfo.toString());
-			e.printStackTrace();
-			return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage(), taskInfo);
+			logger.info("修改定时任务出现异常：{}，参数：{}", e.getMessage(), taskInfo.toString());
+			return ResultUtil.fail(ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMessage(), taskInfo);
 		}
     }
     
     @Override
-    public String pauseTask(QuartzTaskInfo taskInfo) {  
+    public String pauseTask(QuartzTaskInfoDTO dto) {  
         try {
-        	JobKey jobKey = JobKey.jobKey(taskInfo.getTaskNo(), taskInfo.getExecutor());  
+        	JobKey jobKey = JobKey.jobKey(dto.getTaskNo(), dto.getExecutor());  
         	if(scheduler.checkExists(jobKey)) {
-        		
         		scheduler.pauseJob(jobKey);
+        		
+        		QuartzTaskInfo taskInfo = dtoConvertEntity(dto);
+        		taskInfo.setFrozenStatus(ResultEnum.UNFROZEN.getMessage());
+        		updateQuartzTaskInfoOfFrozenStatus(taskInfo);
+        		
         		return ResultUtil.success();
         	}
         	return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
         } catch (SchedulerException e) {  
-        	logger.info("暂停定时任务出现异常，参数：{}", taskInfo.toString());  
-            e.printStackTrace();
-			return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage(), taskInfo);
+        	logger.info("暂停定时任务出现异常:{}，参数：{}", e.getMessage(), dto.toString());  
+			return ResultUtil.fail(ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMessage(), dto);
         }  
     }  
   
     @Override
-    public String resumeTask(QuartzTaskInfo taskInfo){
+    public String resumeTask(QuartzTaskInfoDTO dto){
         try {
-        	JobKey jobKey = JobKey.jobKey(taskInfo.getTaskNo(), taskInfo.getExecutor()); 
+        	JobKey jobKey = JobKey.jobKey(dto.getTaskNo(), dto.getExecutor()); 
     		if(scheduler.checkExists(jobKey)) {
     			
     			scheduler.resumeJob(jobKey);
+    			
+    			QuartzTaskInfo taskInfo = dtoConvertEntity(dto);
+        		taskInfo.setFrozenStatus(ResultEnum.FROZEN.getMessage());
+        		updateQuartzTaskInfoOfFrozenStatus(taskInfo);
     			
     			return ResultUtil.success();
     		}
     		
     		return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
         } catch (SchedulerException e) {  
-        	logger.info("恢复定时任务失败, 参数：{}", taskInfo);
-        	return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage(), taskInfo);
+        	logger.info("恢复定时任务出现异常：{}， 参数：{}", e.getMessage(), dto);
+        	return ResultUtil.fail(ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMessage(), dto);
         }  
     }
     
     @Override
-    public String delTask(QuartzTaskInfo taskInfo) throws Exception {
+    public String delTask(QuartzTaskInfoDTO dto) throws Exception {
     	try {
-    		JobKey jobKey = JobKey.jobKey(taskInfo.getTaskNo(), taskInfo.getExecutor()); 
+    		JobKey jobKey = JobKey.jobKey(dto.getTaskNo(), dto.getExecutor()); 
     		if(scheduler.checkExists(jobKey)) {
     			
     			scheduler.deleteJob(jobKey);
+    			
+    			delQuartzTaskInfo(dto.getTaskNo(), dto.getExecutor());
     			
     			return ResultUtil.success();
     		}
     		
     		return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
         } catch (SchedulerException e) {
-        	logger.info("删除定时任务失败, 参数：{}", taskInfo.toString());
-        	e.printStackTrace();
-            return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage(), taskInfo);
+        	logger.info("删除定时任务出现异常：{},  参数：{}", e.getMessage(), dto.toString());
+            return ResultUtil.fail(ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMessage(), dto);
         }
     }
     
@@ -194,7 +202,6 @@ public class QuartzServiceImpl implements QuartzService {
     		return ResultUtil.success();
 		} catch ( SchedulerException e) {
 			logger.info("定时器启动失败................");
-			e.printStackTrace();
 			return ResultUtil.fail(ResultEnum.FAIL.getCode(), e.getMessage());
 		}
     }
@@ -222,16 +229,44 @@ public class QuartzServiceImpl implements QuartzService {
     private QuartzTaskInfo setInitialValue(QuartzTaskInfo taskInfo) {
     	taskInfo.setCreateTime(LocalDateTime.now());
     	taskInfo.setLastModifyTime(LocalDateTime.now());
+    	taskInfo.setFrozenStatus(ResultEnum.FROZEN.getMessage());
     	return taskInfo;
 	}
-
+    private QuartzTaskInfo dtoConvertEntity(QuartzTaskInfoDTO dto) {
+		QuartzTaskInfo quartzTaskInfo = new QuartzTaskInfo();
+		BeanUtils.copyProperties(dto, quartzTaskInfo);
+		return quartzTaskInfo;
+	}
+    
 	@Override
-	public void updateQuartzTaskInfo(QuartzTaskInfo taskInfo) {
+	public void updateQuartzTaskInfoSelective(QuartzTaskInfo taskInfo) {
 		Example example = new Example(QuartzTaskInfo.class);
 		Criteria criteria = example.createCriteria();
 		criteria.andEqualTo("taskNo", taskInfo.getTaskNo());
 		criteria.andEqualTo("executor", taskInfo.getExecutor());
 		taskInfo.setLastModifyTime(LocalDateTime.now());
 		mapper.updateByExampleSelective(taskInfo, example);
+	}
+	
+	@Override
+	public void updateQuartzTaskInfoOfCronExpression(QuartzTaskInfo taskInfo) {
+		QuartzTaskInfo entity = new QuartzTaskInfo(taskInfo.getTaskNo(), taskInfo.getExecutor());
+		entity.setCronExpression(taskInfo.getCronExpression());
+		updateQuartzTaskInfoSelective(entity);
+	}
+	@Override
+	public void updateQuartzTaskInfoOfFrozenStatus(QuartzTaskInfo taskInfo) {
+		QuartzTaskInfo entity = new QuartzTaskInfo(taskInfo.getTaskNo(), taskInfo.getExecutor());
+		entity.setFrozenStatus(taskInfo.getFrozenStatus());
+		updateQuartzTaskInfoSelective(entity);
+	}
+	
+	@Override
+	public void delQuartzTaskInfo(String taskNo, String executor) {
+		Example example = new Example(QuartzTaskInfo.class);
+		Criteria criteria = example.createCriteria();
+		criteria.andEqualTo("taskNo", taskNo);
+		criteria.andEqualTo("executor", executor);
+		mapper.deleteByExample(example);
 	}
 }
