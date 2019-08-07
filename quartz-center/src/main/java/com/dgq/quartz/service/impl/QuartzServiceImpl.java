@@ -1,6 +1,7 @@
 package com.dgq.quartz.service.impl;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
 	
 	private static Logger logger = LoggerFactory.getLogger(QuartzServiceImpl.class);
 	public static final Gson GSON = new Gson();
-	
+	private static final String TRIGGER_TYPE_SIMPLE = "simple";
 	@Autowired
 	@Qualifier(value = "myScheduler")
 	private Scheduler scheduler;
@@ -72,6 +73,10 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
     public String addTask(QuartzTaskInfo taskInfo) {
         try {
         	
+        	if(TRIGGER_TYPE_SIMPLE.equals(taskInfo.getTriggerType())) {
+        		taskInfo.setCronExpression(taskInfo.getStartDate().format(DateTimeFormatter.ofPattern("s m H d M ? yyyy")));
+        	}
+        	
         	JobKey jobKey = JobKey.jobKey(taskInfo.getTaskNo(), taskInfo.getExecutor());
         	//判断cron表达式是否有效
     		if (!CronExpression.isValidExpression(taskInfo.getCronExpression())) {
@@ -80,9 +85,6 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
         	if(scheduler.checkExists(jobKey)){
         		return ResultUtil.success(ResultEnum.TASKNO_EXIST.getCode(), ResultEnum.TASKNO_EXIST.getMessage());
         	}
-        	
-        	mapper.insert(setInitialValue(taskInfo));
-        	logger.info("定时任务数据保存成功: {}", taskInfo);
         	
         	JobDetail jobDetail = scheduler.getJobDetail(jobKey);
         	jobDetail = JobBuilder.newJob(QuartzMainJobFactory.class).storeDurably()
@@ -96,6 +98,9 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
     				.build();
     		
     		scheduler.scheduleJob(jobDetail, trigger);
+    		
+    		mapper.insert(setInitialValue(taskInfo));
+        	logger.info("定时任务数据保存成功: {}", taskInfo);
     		
     		return ResultUtil.success(taskInfo);
 		} catch (Exception e) {
@@ -178,13 +183,10 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
     @Override
     public String delTask(QuartzTaskInfoDTO dto) throws Exception {
     	try {
+    		delQuartzTaskInfo(dto.getTaskNo(), dto.getExecutor());
     		JobKey jobKey = JobKey.jobKey(dto.getTaskNo(), dto.getExecutor()); 
     		if(scheduler.checkExists(jobKey)) {
-    			
     			scheduler.deleteJob(jobKey);
-    			
-    			delQuartzTaskInfo(dto.getTaskNo(), dto.getExecutor());
-    			
     			return ResultUtil.success();
     		}
     		
@@ -218,26 +220,6 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
 		}
     }
     
-    @SuppressWarnings("unchecked")
-	private Map<String, Object> assembleJobData(QuartzTaskInfo taskInfo) {
-    	return GSON.fromJson(GSON.toJson(taskInfo), HashMap.class);
-	}
-    private void updateJobData(QuartzTaskInfo taskInfo, JobDetail jobDetail) {
-    	JobDataMap jobDataMap = jobDetail.getJobDataMap();
-    	jobDataMap.putAll(assembleJobData(taskInfo));
-	}
-    private QuartzTaskInfo setInitialValue(QuartzTaskInfo taskInfo) {
-    	taskInfo.setCreateTime(LocalDateTime.now());
-    	taskInfo.setLastModifyTime(LocalDateTime.now());
-    	taskInfo.setFrozenStatus(ResultEnum.FROZEN.getMessage());
-    	return taskInfo;
-	}
-    private QuartzTaskInfo dtoConvertEntity(QuartzTaskInfoDTO dto) {
-		QuartzTaskInfo quartzTaskInfo = new QuartzTaskInfo();
-		BeanUtils.copyProperties(dto, quartzTaskInfo);
-		return quartzTaskInfo;
-	}
-    
 	@Override
 	public void updateQuartzTaskInfoSelective(QuartzTaskInfo taskInfo) {
 		Example example = new Example(QuartzTaskInfo.class);
@@ -268,5 +250,40 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
 		criteria.andEqualTo("taskNo", taskNo);
 		criteria.andEqualTo("executor", executor);
 		mapper.deleteByExample(example);
+	}
+
+	@Override
+	public String startupOnce(QuartzTaskInfoDTO dto) throws Exception{
+		JobKey jobKey = JobKey.jobKey(dto.getTaskNo(), dto.getExecutor()); 
+		if(scheduler.checkExists(jobKey)) {
+			scheduler.triggerJob(jobKey);
+			return ResultUtil.success();
+		}
+		return ResultUtil.success(ResultEnum.TASKNO_NO_EXIST.getCode(), ResultEnum.TASKNO_NO_EXIST.getMessage());
+	}
+	
+	@SuppressWarnings("unchecked")
+	private Map<String, Object> assembleJobData(QuartzTaskInfo taskInfo) {
+    	return GSON.fromJson(GSON.toJson(taskInfo), HashMap.class);
+	}
+    private void updateJobData(QuartzTaskInfo taskInfo, JobDetail jobDetail) {
+    	JobDataMap jobDataMap = jobDetail.getJobDataMap();
+    	jobDataMap.putAll(assembleJobData(taskInfo));
+	}
+    private QuartzTaskInfo setInitialValue(QuartzTaskInfo taskInfo) {
+    	taskInfo.setCreateTime(LocalDateTime.now());
+    	taskInfo.setLastModifyTime(LocalDateTime.now());
+    	taskInfo.setFrozenStatus(ResultEnum.FROZEN.getMessage());
+    	return taskInfo;
+	}
+    private QuartzTaskInfo dtoConvertEntity(QuartzTaskInfoDTO dto) {
+		QuartzTaskInfo quartzTaskInfo = new QuartzTaskInfo();
+		BeanUtils.copyProperties(dto, quartzTaskInfo);
+		return quartzTaskInfo;
+	}
+    
+    public static void main(String[] args) {
+		
+    	System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("s m H d M ? yyyy")));
 	}
 }

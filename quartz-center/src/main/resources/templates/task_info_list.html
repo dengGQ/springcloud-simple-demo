@@ -184,7 +184,7 @@
 		        { field: 'executeParamter', title: '执行参数', align : 'center', valign : 'middle', width: '100px'},
 		        { field: 'createTime', title: '创建时间', align : 'center', valign : 'middle'},
 		        { title: '操作', align : 'center', valign : 'middle', width: '200px', formatter: function(value, row, index){
-		        	var startupOnceBtn = "<button id='runOnce' type='button' class='btn btn-primary btn-margin'>立即执行</button>";
+		        	var startupOnceBtn = "<button onclick='javascript: executeOnceFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin'>立即执行</button>";
 		        	var pauseTaskBtn = "<button onclick='javascript: pauseTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin btn-red-bgcolor'>暂停</button>";
 		        	var resumeTaskBtn = "<button onclick='javascript: resumeTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin'>启动</button>";
 		        	var delTaskBtn = "<button onclick='javascript: delTaskFunc(this,\""+row.taskNo+"\",\""+row.executor+"\")' type='button' class='btn btn-primary btn-margin btn-black-bgcolor'>删除</button>";
@@ -243,6 +243,26 @@
             },
             error:function(e){
             }
+        });
+	}
+	function executeOnceFunc(self, taskNo, executor) {
+		var params = {"taskNo": taskNo, "executor": executor};
+		simpleAjaxPost('quartzMgr/executeOnce', params, function(result){
+			layer.alert(result.message);
+	    	$('#quart-info-table').bootstrapTable( 'refresh');
+		})
+	}
+	
+	function simpleAjaxPost(url, paramsJson, callBack){
+		$.ajax({
+            url: url,
+            type: "post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(paramsJson),
+            dataType: "json",
+            success:function(result){
+            	callBack(result);
+            },
         });
 	}
 </script>

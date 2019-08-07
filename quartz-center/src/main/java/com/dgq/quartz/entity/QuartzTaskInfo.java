@@ -1,10 +1,12 @@
 package com.dgq.quartz.entity;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.dgq.quartz.commons.annotation.QueryType;
 import com.dgq.quartz.commons.annotation.QueryTypeEnum;
@@ -47,6 +49,14 @@ public class QuartzTaskInfo implements Serializable{
 
     @ApiModelProperty(notes = "触发规则", example = "0 55 9 26 7 ? 2019")
     private String cronExpression;
+    
+    @ApiModelProperty(notes = "开始时间，结合triggerType使用，只有triggerType为simple时，触发器才会使用该字段")
+    @Transient
+    private LocalDateTime startDate;
+    
+    @ApiModelProperty(notes = "触发类型",example = "simple | cron")
+    @Transient
+    private String triggerType;
     
     @ApiModelProperty(notes = "触发类型", example = "http")
     private String sendType;

@@ -89,7 +89,7 @@
 			columns :  [
 				{ checkbox : true}, 
 				{ title: '序号',valign : 'left',formatter: function (value, row, index) {return index+1;}},
-		        /* { field: 'taskId', title: '执行编号', align: 'center', valign : 'middle'}, */ 
+		        { field: 'taskId', title: '执行编号', align: 'center', valign : 'middle'}, 
 		        { field: 'taskName', title: '任务名称', align: 'center', valign : 'middle'}, 
 		        { field: 'executeStatus', title: '执行状态', align : 'center', valign : 'middle', formatter: function(value, row, index) {
 		        	return value == 0 ? "成功" : (value == 1 ? "失败" : "异常");

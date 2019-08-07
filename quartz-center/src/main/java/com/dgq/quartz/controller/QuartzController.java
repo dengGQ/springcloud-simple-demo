@@ -74,7 +74,7 @@ public class QuartzController {
 	@PostMapping("/del")
 	@ResponseBody
 	public String delQuartz(@RequestBody QuartzTaskInfoDTO dto) throws Exception {
-		logger.info("修改定时任务, 请求参数：{}", dto.toString());
+		logger.info("删除定时任务, 请求参数：{}", dto.toString());
 		return quartzService.delTask(dto);
 	}
 	
@@ -92,6 +92,14 @@ public class QuartzController {
 	public String resumeTask(@RequestBody QuartzTaskInfoDTO dto) throws Exception {
 		logger.info("恢复定时任务, 请求参数：{}", dto.toString());
 		return quartzService.resumeTask(dto);
+	}
+	
+	@ApiOperation(value = "立即运行一次")
+	@PostMapping("/executeOnce")
+	@ResponseBody
+	public String executeOnce(@RequestBody QuartzTaskInfoDTO dto) throws Exception {
+		logger.info("立即执行一次一次, 请求参数：{}", dto.toString());
+		return quartzService.startupOnce(dto);
 	}
 	
 	@ApiOperation(value = "启动调度器")

@@ -52,6 +52,13 @@ public interface QuartzService extends BaseService<QuartzTaskInfo>{
 	 */
 	String pauseTask(QuartzTaskInfoDTO dto);
 	
+	
+	/**
+	 * 暂停定时任务
+	 * @param @param taskInfo
+	 */
+	String startupOnce(QuartzTaskInfoDTO dto) throws Exception;
+	
 	/**
 	 * 暂停调度器
 	 */
@@ -86,6 +93,13 @@ public interface QuartzService extends BaseService<QuartzTaskInfo>{
 	 */
 	void updateQuartzTaskInfoOfFrozenStatus(QuartzTaskInfo taskInfo);
 	
+	/**
+	 * @Description: 立即删除一个已有任务
+	 * @param @param taskNo
+	 * @param @param executor    参数
+	 * @return void    返回类型
+	 * @throws
+	 */
 	void delQuartzTaskInfo(String taskNo, String executor);
 }
 
