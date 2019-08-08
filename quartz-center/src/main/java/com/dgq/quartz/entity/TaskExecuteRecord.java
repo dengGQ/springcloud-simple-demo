@@ -8,6 +8,7 @@ import javax.persistence.Table;
 
 import com.dgq.quartz.commons.annotation.QueryType;
 import com.dgq.quartz.commons.annotation.QueryTypeEnum;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -44,6 +45,7 @@ public class TaskExecuteRecord implements Serializable{
 	private String taskName;
 	
 	@ApiModelProperty(notes = "最后执行时间")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime lastExecuteTime;
 	
 	@ApiModelProperty(notes = "执行状态")
@@ -53,6 +55,7 @@ public class TaskExecuteRecord implements Serializable{
 	private String failReason;
 	
 	@ApiModelProperty(notes = "创建时间")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime createTime;
 	
 	/*

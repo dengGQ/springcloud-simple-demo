@@ -10,6 +10,7 @@ import javax.persistence.Transient;
 
 import com.dgq.quartz.commons.annotation.QueryType;
 import com.dgq.quartz.commons.annotation.QueryTypeEnum;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -71,9 +72,11 @@ public class QuartzTaskInfo implements Serializable{
     private String frozenStatus;
     
     @ApiModelProperty(notes = "创建时间", hidden = true)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
     @ApiModelProperty(notes = "最后修改时间", hidden = true)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lastModifyTime;
 
 	public QuartzTaskInfo(String taskNo, String executor) {
