@@ -84,7 +84,7 @@
 			queryParams : function(params) {
 				return JSON.stringify({
 						pageSize: params.pageSize, pageNumber: params.pageNumber,
-						record:{taskName: $("#taskName").val(), executor: $("#executor").val()}
+						record:{taskName: $("#taskName").val(), taskId: $("#executor").val()}
 					});
 			},
 			columns :  [
