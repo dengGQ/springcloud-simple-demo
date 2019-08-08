@@ -23,6 +23,7 @@
     	.btn-container{position: absolute;right: 53px;}
     	.btn-red-bgcolor, .btn-red-bgcolor:hover{background-color: black; border-color: black;}
     	.btn-black-bgcolor, .btn-black-bgcolor:hover{background-color: red; border-color: red;}
+    	.table {table-layout:fixed;word-break:break-all;}
     </style>
 </head>
 <body>
@@ -88,18 +89,15 @@
 			},
 			columns :  [
 				{ checkbox : true}, 
-				{ title: '序号',valign : 'left',formatter: function (value, row, index) {return index+1;}},
-		        { field: 'taskId', title: '执行编号', align: 'center', valign : 'middle'}, 
-		        { field: 'taskName', title: '任务名称', align: 'center', valign : 'middle'}, 
-		        { field: 'executeStatus', title: '执行状态', align : 'center', valign : 'middle', formatter: function(value, row, index) {
+				{ title: '序号', align : 'center', width: "5%", formatter: function (value, row, index) {return index+1;}},
+		        { field: 'taskId', title: '执行编号', align: 'center', valign : 'middle', width: "10%"}, 
+		        { field: 'taskName', title: '任务名称', align: 'center', valign : 'middle',  width: "15%"}, 
+		        { field: 'executeStatus', title: '执行状态', align : 'center', valign : 'middle',  width: "10%", formatter: function(value, row, index) {
 		        	return value == 0 ? "成功" : (value == 1 ? "失败" : "异常");
 		        }},
-		        { field: 'failReason', title: '失败原因', align : 'center', valign : 'middle'}, 
-		        { field: 'cronExpression', title: '触发规则', align : 'center', valign : 'middle'}, 
-		        { field: 'lastExecuteTime', title: '最后执行时间', align : 'center', valign : 'middle'}, 
-		        { title: '操作', align : 'center', valign : 'middle', width: '200px', formatter: function(value, row, index){
-		        	return "<a href='#'>详情</a>";
-		        }},
+		        { field: 'failReason', title: '失败原因', align : 'center', valign : 'middle',  width: "35%"}, 
+		        { field: 'cronExpression', title: '触发规则', align : 'center', valign : 'middle',  width: "10%"}, 
+		        { field: 'lastExecuteTime', title: '最后执行时间', align : 'center', valign : 'middle',  width: "15%"}
 		    ]
 		});
 	}
