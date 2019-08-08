@@ -49,7 +49,7 @@ public class QuartzMainJobFactory implements Job{
 		try {
 			if(ResultEnum.HTTP.getMessage().equals(sendType)) {
 				//发送任务请求
-				String result = HttpClientUtil.doPost(url, "text/json", executeParams);
+				String result = HttpClientUtil.doPost(url, "application/json", executeParams);
                 logger.info("taskNo:{}, executor:{}, 执行结果:{}", taskNo, executor, result);
 				//....请求成功
 				record.setExecuteStatus(0);
