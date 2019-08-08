@@ -98,7 +98,7 @@ public class QuartzController {
 	@PostMapping("/executeOnce")
 	@ResponseBody
 	public String executeOnce(@RequestBody QuartzTaskInfoDTO dto) throws Exception {
-		logger.info("立即执行一次一次, 请求参数：{}", dto.toString());
+		logger.info("立即执行一次, 请求参数：{}", dto.toString());
 		return quartzService.startupOnce(dto);
 	}
 	

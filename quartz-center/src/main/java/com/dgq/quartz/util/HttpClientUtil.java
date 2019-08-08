@@ -1,5 +1,7 @@
 package com.dgq.quartz.util;
 
+import java.util.Objects;
+
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.ByteArrayRequestEntity;
@@ -84,7 +86,9 @@ public class HttpClientUtil {
         method.getParams().setCookiePolicy(CookiePolicy.IGNORE_COOKIES);
         method.getParams().setParameter(HttpMethodParams.RETRY_HANDLER, new DefaultHttpMethodRetryHandler(0, false));
         try {
-            method.setRequestEntity(new ByteArrayRequestEntity(content.getBytes(ENCODING)));
+        	if (Objects.nonNull(content)) {
+        		method.setRequestEntity(new ByteArrayRequestEntity(content.getBytes(ENCODING)));
+			}
             method.addRequestHeader("Content-Type", contentType);
 
             int statusCode = client.executeMethod(method);
