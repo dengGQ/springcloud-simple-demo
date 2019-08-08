@@ -13,8 +13,8 @@ import org.slf4j.LoggerFactory;
 /**
  * @ClassName HttpClientUtil
  * @Description httpclient get/post方式调用接口
- * @Author simonsfan
- * @Date 2019/1/7
+ * @Author dgq
+ * @Date 2019/8/7
  * Version  1.0
  */
 public class HttpClientUtil {
