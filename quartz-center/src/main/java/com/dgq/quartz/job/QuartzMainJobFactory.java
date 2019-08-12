@@ -32,7 +32,7 @@ public class QuartzMainJobFactory implements Job{
 	
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		System.out.println(this);
+		System.out.println(Thread.currentThread());
 		TaskExecuteRecordService recordService = (TaskExecuteRecordService) ApplicationContextHolder.getBean("taskExecuteRecordServiceImpl");
 		JobDataMap map = context.getMergedJobDataMap();
 		String taskNo = String.valueOf(map.get("taskNo")),
