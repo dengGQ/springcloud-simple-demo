@@ -234,6 +234,7 @@ public class QuartzServiceImpl extends BaseAbstractServiceImpl<QuartzTaskInfo, Q
 	public void updateQuartzTaskInfoOfCronExpression(QuartzTaskInfo taskInfo) {
 		QuartzTaskInfo entity = new QuartzTaskInfo(taskInfo.getTaskNo(), taskInfo.getExecutor());
 		entity.setCronExpression(taskInfo.getCronExpression());
+		entity.setFrozenStatus(ResultEnum.FROZEN.getMessage());
 		updateQuartzTaskInfoSelective(entity);
 	}
 	@Override

@@ -12,11 +12,15 @@
     <link href="plug-in/hplus/css/style.min862f.css?v=4.1.0" rel="stylesheet">
     <link rel="stylesheet" href="plug-in/bootstrap-table/bootstrap-table.css">
     <link rel="stylesheet" href="plug-in/bootstrap/3.3.7/css/My_bootstrap.css">
+	<link rel="stylesheet" href="plug-in/bootstrap3-editable/css/bootstrap-editable.css"/>
     <script src="plug-in/jquery/1.10.2/jquery.js"></script>
 	<script src="plug-in/hplus/js/bootstrap.min.js?v=3.3.6"></script>
 	<script src="plug-in/bootstrap-table/bootstrap-table.js"></script>
 	<script src="plug-in/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
     <script src="plug-in/layer/layer.js"></script>
+	<script src="plug-in/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="plug-in/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
+	
 	<script src="js/util.js"></script>
     <style type="text/css">
     	.btn-margin{margin-right: 5px;}
@@ -179,7 +183,10 @@
 		        { field: 'taskNo', title: '任务编号', align: 'center', valign : 'middle', width: "10%"}, 
 		        { field: 'executor', title: '执行方', align : 'center', valign : 'middle', width: "10%"}, 
 		        { field: 'taskName', title: '任务名称', align : 'center', valign : 'middle', width: "15%"},
-		        { field: 'cronExpression', title: '触发规则', align : 'center', valign : 'middle', width: "10%"}, 
+		        { field: 'cronExpression', title: '触发规则', align : 'center', valign : 'middle', width: "15%", editable:{
+		        	type: 'text',
+		        	title: '触发规则'
+		        }}, 
 		        { field: 'sendType', title: '触发类型', align : 'center', valign : 'middle', width: "10%"}, 
 		        { field: 'url', title: '请求地址', align : 'center', valign : 'middle', width: "20%"},
 		        { field: 'executeParamter', title: '执行参数', align : 'center', valign : 'middle', width: "20%"},
@@ -195,7 +202,22 @@
 			        	return startupOnceBtn + resumeTaskBtn + delTaskBtn;
 		        	}
 		        }},
-		    ]
+		    ],
+		    onEditableSave: function (field, row, oldValue, $el) {//提交行内编辑数据
+		    	console.log(row)
+		    	$.ajax({
+		            url:"quartzMgr/edit",
+		            type:"post",
+		            contentType: "application/json; charset=utf-8",
+		            data: JSON.stringify(row),
+		            dataType: "json",
+		            success:function(result){
+		            	layer.alert(result.message);
+		            },
+		            error:function(e){
+		            }
+		        });
+		    }	 
 		});
 	}
 	
