@@ -15,7 +15,6 @@ import com.dgq.quartz.entity.TaskExecuteRecord;
 import com.dgq.quartz.service.TaskExecuteRecordService;
 import com.dgq.quartz.util.ApplicationContextHolder;
 import com.dgq.quartz.util.CommonUtil;
-import com.google.gson.Gson;
 
 /**
  * @ClassName: job
@@ -27,8 +26,6 @@ import com.google.gson.Gson;
 public class QuartzMainJobFactory implements Job{
 	
 	private static Logger logger = LoggerFactory.getLogger(QuartzMainJobFactory.class);
-	
-	public static final Gson GSON = new Gson();
 	
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
