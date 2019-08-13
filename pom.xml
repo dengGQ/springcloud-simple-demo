@@ -32,6 +32,7 @@
         <pagehelper.version>1.2.9</pagehelper.version>
         <httpclient-version>3.1</httpclient-version>
         <httpasyncclient.version>4.1.4</httpasyncclient.version>
+        <poi.version>3.9</poi.version>
 	</properties>
   
 	<dependencyManagement>
@@ -112,7 +113,12 @@
 			    <artifactId>httpasyncclient</artifactId>
 			    <version>${httpasyncclient.version}</version>
 			</dependency>
-				        
+			
+			<dependency>
+			    <groupId>org.apache.poi</groupId>
+			    <artifactId>poi-ooxml</artifactId>
+			    <version>${poi.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>
