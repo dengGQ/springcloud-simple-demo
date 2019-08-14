@@ -1,47 +1,3 @@
-server:
-  port: 8080
-
 spring:
   application:
-    name: quartz-center
-  datasource:
-    url: jdbc:mysql://localhost:3306/quartz?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 1217
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    filters: stat
-    maxActive: 1000
-    initialSize: 100
-    maxWait: 60000
-    minIdle: 500
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    cache: false
-    enabled: true
-    encoding: UTF-8
-    mode: HTML
-
-# mybatis
-mybatis:
-  type-aliases-package: com.dgq.quartz.entity
-  #mapper-locations: classpath:/mybatis-mappers/*
-  configuration:
-    mapUnderscoreToCamelCase: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-#通用Mapper配置
-mapper:
-  not-empty: false
-  mappers: com.dgq.quartz.commons.mapper.CommonMapper
-  IDENTITY: MYSQL
-  ORDER: AFTER
+    name: quartz-center  profiles:    active:    - dev

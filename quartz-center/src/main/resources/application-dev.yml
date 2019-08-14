@@ -1,0 +1,95 @@
+server:
+  port: 8080
+
+public-key: 公钥
+
+spring:
+  profiles:    include:    - dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      dbType: mysql
+      url: jdbc:mysql://localhost:3306/quartz?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 1217
+      driver-class-name: com.mysql.jdbc.Driver
+      #配置初始化大小
+      initialSize: 5
+      #最小空闲连接
+      minIdle: 5
+      #最大连接数量
+      maxActive: 20
+      #配置获取连接等待超时的时间
+      maxWait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 2000
+      #配置一个连接在池中最小、最大生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 600000
+      maxEvictableIdleTimeMillis: 900000
+      #是否自动回收超时连接
+      removeAbandoned: true
+      #指定连接应该被废弃的时间 秒
+      removeAbandonedTimeout: 1800
+      #测试sql
+      validationQuery: SELECT 1 FROM DUAL
+      #建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效
+      testWhileIdle: true
+      #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。
+      testOnBorrow: false
+      #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+      testOnReturn: false
+      #执行连接参数, 如果需要解密：config.decrypt=true
+      connectionProperties: config.decrypt=false;config.decrypt.key=${public-key};druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      #是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+      poolPreparedStatements: true
+      #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100
+      maxPoolPreparedStatementPerConnectionSize: 50
+      #属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有： 监控统计用的filter:stat 日志用的filter:log4j 防御sql注入的filter:wall
+      filters: stat,wall,config
+      web-stat-filter:
+        enabled: true
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      stat-view-servlet:
+        enabled: true
+        reset-enable: false
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+      filter:
+        slf4j:
+          enabled: true
+          statement-create-after-log-enabled: false
+          statement-close-after-log-enabled: false
+          result-set-open-after-log-enabled: false
+          result-set-close-after-log-enabled: false
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+
+#日志文件配置
+logging:
+  level:
+    root: info
+  config: classpath:logback-spring.xml
+logback:
+  appName: ${spring.application.name}
+  logDir: D:\\log\\${spring.application.name}
+
+#mybatis
+mybatis:
+  type-aliases-package: com.dgq.quartz.entity
+  #mapper-locations: classpath:/mybatis-mappers/*
+  configuration:
+    mapUnderscoreToCamelCase: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#通用Mapper配置
+mapper:
+  not-empty: false
+  mappers: com.dgq.quartz.commons.mapper.CommonMapper
+  IDENTITY: MYSQL
+  ORDER: AFTER
