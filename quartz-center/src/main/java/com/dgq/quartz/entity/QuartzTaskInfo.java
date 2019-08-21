@@ -1,7 +1,6 @@
 package com.dgq.quartz.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.time.LocalDateTime;
 
 import javax.persistence.Id;
