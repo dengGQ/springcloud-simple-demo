@@ -74,7 +74,7 @@ spring:
 logging:
   level:
     root: info
-  config: classpath:logback-spring.xml
+  config: classpath:logback-quartz-center.xml
 logback:
   appName: ${spring.application.name}
   logDir: D:\\log\\${spring.application.name}
