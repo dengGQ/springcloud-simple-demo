@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: timer-center
+  profiles:
+    active:
+    - dev
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-center
+      #失败快速响应, config-server没有启动, 直接报错
+      fail-fast: true
+eureka:
+  client:
+    #表示eureka client间隔多久去拉取服务注册信息    registry-fetch-interval-seconds: 5  instance:    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 3
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # actuator 服务监控端点加载所有, 默认只加载info / health
+        include: "*"
+  endpoint:
+    health:
+      # 查看详细的应用健康信息 always是允许, 除了always之外还有when-authorized、never，默认值是never
+      show-details: always
+      
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      profile: dev
+server:
+  port: 9191
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+---
+spring:
+  profiles: test
+  cloud:    config:      profile: test
+server:
+  port: 9700
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
+      
+      
+      
+      
