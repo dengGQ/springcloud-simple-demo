@@ -24,17 +24,17 @@ import okhttp3.Response;
  */
 public class OkHttpClientUtil {
 	
-	private static Logger log = LoggerFactory.getLogger(HttpClientUtil.class);
+	private static Logger log = LoggerFactory.getLogger(OkHttpClientUtil.class);
 	
 	public static void doGet(String url, String contentType, String content, Consumer<ResponseResult> consumer) throws Exception {
 		Request request = new Request.Builder().url(url).build();
 		request(request, consumer);
 	}
 	
-	public static void doPost(String url, String contentType, String content, Consumer<ResponseResult> consumer) throws Exception {
+	public static void doPost(String url, String mimeType, String content, Consumer<ResponseResult> consumer) throws Exception {
 		Request request = new Request.Builder()
 			.url(url)
-			.post(RequestBody.create(content, MediaType.parse(contentType)))
+			.post(RequestBody.create(content, MediaType.get(mimeType)))
 			.build();
 		request(request, consumer);
 	}
