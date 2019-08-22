@@ -57,10 +57,8 @@ public class BuisnessChecker {
 	//账户记录编号前缀：CN+4位报告年度+14位金融机构注册码
 	private String docRefIdPrefix;
 	//报告唯一编码前缀：RE+14位金融破机构注册码+报告年度
-	private static AtomicInteger messageRefIdSerialNumStart = new AtomicInteger(0);
 	private static AtomicInteger docRefIdSerialNumStart = new AtomicInteger(0);
 	private static final DecimalFormat df = new DecimalFormat("000000000");
-	private static final DecimalFormat messageRefIdDf = new DecimalFormat("00000000");
 	public static final List<String> specialCharacter = Arrays.asList(new String[] {"&","<","/*","--","&#"});
 	public ICRSNonResidentTaxService reportTaxInfoService;
 	
