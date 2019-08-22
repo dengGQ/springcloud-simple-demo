@@ -16,6 +16,6 @@ public class IndexController {
 	@RequestMapping("/")
 	public String index() {
 		logger.info("主页面...................");
-		return "/index";
+		return "index";
 	}
 }
