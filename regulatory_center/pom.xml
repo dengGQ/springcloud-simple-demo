@@ -43,7 +43,7 @@
 		<!-- 安全框架 -->
 		<shiro.version>1.4.0</shiro.version>
 		<!-- 定时任务 -->
-		<quartz.version>2.2.3</quartz.version>
+		<quartz.version>2.3.2</quartz.version>
 		<!-- poi -->
 		<poi.version>3.9</poi.version>
 	</properties>
