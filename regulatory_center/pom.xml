@@ -22,7 +22,7 @@
 		<maven.javadoc.plugin>2.10.4</maven.javadoc.plugin>
 
 		<!-- spring版本号 -->
-		<spring.version>4.3.8.RELEASE</spring.version>
+		<spring.version>5.2.22.RELEASE</spring.version>
 		<!-- log4j2日志文件管理包版本 -->
 		<log4j2.version>1.5.3.RELEASE</log4j2.version>
 		<!-- mybatis版本号 -->
