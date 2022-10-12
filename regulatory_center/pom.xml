@@ -41,7 +41,7 @@
 		<slf4j.version>1.7.21</slf4j.version>
 		<log4j.version>2.7</log4j.version>
 		<!-- 安全框架 -->
-		<shiro.version>1.4.0</shiro.version>
+		<shiro.version>1.10.0</shiro.version>
 		<!-- 定时任务 -->
 		<quartz.version>2.2.3</quartz.version>
 		<!-- poi -->
